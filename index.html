@@ -27,10 +27,10 @@
         .profile-pic {
             display: block;
             margin: 0 auto;
-            width: 150px;
-            height: 150px;
+            width: 150px; /* 幅だけを指定 */
             border-radius: 50%;
             background: #ccc;
+            object-fit: cover; /* 縦横比を維持しつつトリミング */
         }
         a {
             color: #0073e6;
