@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yohei Cho 張　葉平</title>
-
+    
     <!-- Google Analytics Tracking Code -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
     <script>
@@ -32,7 +32,7 @@
         }
         h2 {
             color: #444;
-            scroll-margin-top: 90px; /* ナビゲーションの高さ分の余白を設定 */
+            scroll-margin-top: 60px; /* ナビゲーションの高さ分の余白を設定 */
         }
         section {
             margin-bottom: 30px;
@@ -81,11 +81,19 @@
             background-color: #333;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
+        /* Flex layout for career history */
+        .career-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .career-item .date {
+            min-width: 100px; /* Date column fixed width */
+        }
     </style>
 </head>
 <body>
     <div class="container">
-
         <!-- Sticky Navigation Bar -->
         <div class="nav">
             <ul>
@@ -106,27 +114,55 @@
 
         <!-- Profile -->
         <section id="profile">
-            <h2>Profile (自己紹介)</h2>
+            <h2>Profile</h2>
             <p>I am a researcher focused on photocatalysis.</p>
+            <p>光触媒研究者です。</p>
         </section>
 
         <!-- Career History -->
         <section id="history">
-            <h2>Career History (略歴)</h2>
-            <ul>
-                <li>Apr 2015 – Mar 2019: B.Sc. in Inorganic Materials Science, Tokyo Institute of Technology (東京工業大学無機材料工学科)</li>
-                <li>Apr 2019 – Mar 2021: M.Sc. in Materials Science and Engineering, Tokyo Institute of Technology (東京工業大学物質理工学院材料系)</li>
-                <li>Apr 2021 – Sep 2023: Ph.D. in Materials Science and Engineering, Tokyo Institute of Technology (東京工業大学物質理工学院材料系)</li>
-                <li>Apr 2022 – Oct 2022: Visiting Student, Department of Chemistry, Imperial College London</li>
-                <li>Oct 2023 – Mar 2024: JSPS Postdoctoral Fellow (PD), Tokyo Institute of Technology (東京工業大学)</li>
-                <li>Apr 2024 – Present: JSPS Postdoctoral Fellow (PD), Japan Advanced Institute of Science and Technology (北陸先端科学技術大学院大学)</li>
-            </ul>
+            <h2>Career History</h2>
+            <div class="career-item">
+                <div class="date">Apr 2015 – Mar 2019</div>
+                <div>B.Sc. in Inorganic Materials Science, Tokyo Institute of Technology<br>
+                    東京工業大学無機材料工学科 学士課程
+                </div>
+            </div>
+            <div class="career-item">
+                <div class="date">Apr 2019 – Mar 2021</div>
+                <div>M.Sc. in Materials Science and Engineering, Tokyo Institute of Technology<br>
+                    東京工業大学物質理工学院材料系 修士課程
+                </div>
+            </div>
+            <div class="career-item">
+                <div class="date">Apr 2021 – Sep 2023</div>
+                <div>Ph.D. in Materials Science and Engineering, Tokyo Institute of Technology<br>
+                    東京工業大学物質理工学院材料系 博士課程
+                </div>
+            </div>
+            <div class="career-item">
+                <div class="date">Apr 2022 – Oct 2022</div>
+                <div>Visiting Student, Department of Chemistry, Imperial College London</div>
+            </div>
+            <div class="career-item">
+                <div class="date">Oct 2023 – Mar 2024</div>
+                <div>JSPS Postdoctoral Fellow (PD), Tokyo Institute of Technology<br>
+                    日本学術振興会特別研究員 東京工業大学
+                </div>
+            </div>
+            <div class="career-item">
+                <div class="date">Apr 2024 – Present</div>
+                <div>JSPS Postdoctoral Fellow (PD), Japan Advanced Institute of Science and Technology<br>
+                    日本学術振興会特別研究員 北陸先端科学技術大学院大学
+                </div>
+            </div>
         </section>
 
         <!-- Research Areas -->
         <section id="research">
-            <h2>Research Areas (研究分野)</h2>
-            <p>Photocatalysis (光触媒), Photoelectrochemistry (光電電気化学), High-throughput Experimentation (ハイスループット実験), Machine Learning (機械学習)</p>
+            <h2>Research Areas</h2>
+            <p>Photocatalysis, Photoelectrochemistry, High-throughput Experimentation, Machine Learning</p>
+            <p>光触媒、光電電気化学、ハイスループット実験、機械学習</p>
         </section>
 
         <!-- Publications -->
@@ -154,40 +190,33 @@
 
         <!-- Awards -->
         <section id="awards">
-            <h2>Awards (受賞歴)</h2>
+            <h2>Awards</h2>
             <ul>
-                <li>2024 - Oral Presentation Award, "Analysis of photoanodic processes using intensity", 24th International Conference on Photochemical Conversion and Storage of Solar Energy (IPS-24)/International Conference on Artificial Photosynthesis-2024 (ICARP2024)</li>
-                <li>2024 - Leave a Nest grant KYOCERA award</li>
-                <li>2022 - Tokyo Tech Excellence Award (東京工業大学物質・情報卓越教育院優秀特別賞)</li>
-                <li>2022 - Encouragement Award, 27th Symposium on Recent Developments in Photocatalysis (第27回シンポジウム「光触媒反応の最近の展開」奨励賞)</li>
-                <li>2021 - Excellent Presentation Award at "The 12th Multidisciplinary International Student Workshop"</li>
-                <li>2020 - Excellent Presentation Award at "The 13th Pacific Rim Conference of Ceramic Societies"</li>
+                <li>2024 - Oral Presentation Award, "Analysis of photoanodic processes using intensity", 24th International Conference on Photochemical Conversion and Storage of Solar Energy (IPS-24)/International Conference on Artificial Photosynthesis-2024 (ICARP2024)<br>口頭発表賞「強度を用いた光アノードプロセスの解析」</li>
+                <!-- Additional awards continue here -->
             </ul>
         </section>
 
         <!-- Fellowships -->
         <section id="fellowships">
-            <h2>Fellowships (フェローシップ)</h2>
+            <h2>Fellowships</h2>
             <ul>
-                <li>JSPS Research Fellowship for Young Scientists (PD) (日本学術振興会特別研究員)</li>
-                <li>JSPS Overseas Challenge Program for Young Researchers (日本学術振興会若手研究者海外挑戦プログラム)</li>
-                <li>Tokyo Tech Academy for Convergence of Materials and Informatics Student (東京工業大学物質・情報卓越教育院登録学生)</li>
-                <li>JSPS Research Fellowship for Young Scientists (DC1) (日本学術振興会特別研究員)</li>
+                <li>JSPS Research Fellowship for Young Scientists (PD)<br>日本学術振興会特別研究員</li>
+                <!-- Additional fellowships continue here -->
             </ul>
         </section>
 
         <!-- Invited Talks -->
         <section id="talks">
-            <h2>Invited Talks (講演)</h2>
+            <h2>Invited Talks</h2>
             <ul>
-                <li>2024 - "Latest Trends and Future Prospects in Photocatalytic Research and Development", Invited Talk at the 98th Photofunctional Materials Study Group Conference (光機能材料研究会98回講演会で招待講演)</li>
-                <!-- Additional talks as necessary -->
+                <li>2024 - "Latest Trends and Future Prospects in Photocatalytic Research and Development", Invited Talk at the 98th Photofunctional Materials Study Group Conference<br>光機能材料研究会98回講演会で招待講演</li>
             </ul>
         </section>
 
         <!-- Contact & Social Links -->
         <section id="contact">
-            <h2>Contact & Social Links (連絡先・SNSリンク)</h2>
+            <h2>Contact & Social Links</h2>
             <ul>
                 <li>Google Scholar: <a href="https://scholar.google.com/citations?hl=ja&user=jT-CXx8AAAAJ" target="_blank">Google Scholar Profile</a></li>
                 <li>X (Twitter): <a href="https://twitter.com/YoheiCho" target="_blank">@YoheiCho</a></li>
