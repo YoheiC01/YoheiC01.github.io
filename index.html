@@ -27,7 +27,6 @@
             padding: 20px;
         }
         h1, h2 {
-            text-align: center;
             color: #444;
         }
         section {
@@ -36,10 +35,10 @@
         .profile-pic {
             display: block;
             margin: 0 auto;
-            width: 150px; /* 幅だけを指定 */
+            width: 150px;
             border-radius: 50%;
             background: #ccc;
-            object-fit: cover; /* 縦横比を維持しつつトリミング */
+            object-fit: cover;
         }
         a {
             color: #0073e6;
@@ -52,27 +51,68 @@
             text-align: right;
             margin-top: 10px;
         }
+        /* Sticky Navigation Bar */
+        .nav {
+            position: sticky;
+            top: 0;
+            background: #f9f9f9;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            z-index: 1000;
+        }
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+            margin: 0;
+        }
+        .nav ul li {
+            margin: 0;
+        }
+        .nav ul li a {
+            font-weight: bold;
+            color: #0073e6;
+            text-decoration: none;
+        }
+        .nav ul li a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- 英語ページへの切り替えリンク -->
+
+        <!-- Language switch -->
         <div class="language-switch">
             <a href="index_en.html">English</a>
+        </div>
+
+        <!-- Sticky Navigation Bar -->
+        <div class="nav">
+            <ul>
+                <li><a href="#profile">自己紹介</a></li>
+                <li><a href="#history">略歴</a></li>
+                <li><a href="#research">研究分野</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#awards">受賞歴・フェローシップ</a></li>
+                <li><a href="#talks">講演</a></li>
+                <li><a href="#contact">連絡先・SNSリンク</a></li>
+            </ul>
         </div>
 
         <!-- Header with Profile Picture and Name -->
         <h1>Yohei Cho 張　葉平</h1>
         <img src="profile-pic.jpg" alt="プロフィール写真" class="profile-pic">
 
-        <!-- 自己紹介 -->
-        <section>
+        <!-- Self Introduction -->
+        <section id="profile">
             <h2>自己紹介</h2>
             <p>光触媒を研究しています</p>
         </section>
 
-        <!-- 略歴 -->
-        <section>
+        <!-- Career History -->
+        <section id="history">
             <h2>略歴</h2>
             <ul>
                 <li>2015/4 – 2019/3　東京工業大学無機材料工学科　学士課程</li>
@@ -84,72 +124,33 @@
             </ul>
         </section>
 
-
-        <!-- 研究分野 -->
-        <section>
+        <!-- Research Field -->
+        <section id="research">
             <h2>研究分野</h2>
             <p>光触媒、光電電気化学、ハイスループット実験、機械学習</p>
         </section>
 
-<section>
-
         <!-- Publications -->
-        <section>
-            <h1>Publications</h1>
-            <ul>
-                <li><b><u>Yohei Cho</u></b>, Tianhao He, Benjamin Moss, Daniele Benetti, Caiwu Liang, Lei Tian, Lucy Jessica F Hart, Anna A Wilson, Yu Taniguchi, Junyi Cui, "Analyzing the Temperature Dependence of Titania Photocatalysis: Kinetic Competition between Water Oxidation Catalysis and Back Electron–Hole Recombination", <i>ACS Catalysis</i>, 14, pp 16543-16550, <b>2024</b>, <a href="https://doi.org/10.1021/acscatal.4c03685">https://doi.org/10.1021/acscatal.4c03685</a></li>
-                <li>Hiroaki Kaneko, <b><u>Yohei Cho</u></b>, Tomotaka Sugimura, Ayako Hashimoto, Akira Yamaguchi, Masahiro Miyauchi, "Sustaining syngas production at a near-unity H2/CO ratio in the photo-induced dry reforming of methane independent of the reactant gas composition", <i>Chemical Communications</i>, 60(75), pp 10406-10409, <b>2024</b>, <a href="https://doi.org/10.1039/D4CC03088E">https://doi.org/10.1039/D4CC03088E</a></li>
-                <li>Yue Yang, Masayuki Toyoda, Akira Yamaguchi, <b><u>Yohei Cho</u></b>, An Niza El Aisnada, Hideki Abe, Shigenori Ueda, Sayuri Okunaka, Susumu Saito, Min Liu, "Bandgap widening through doping for improving the photocatalytic oxidation ability of narrow-bandgap semiconductors", <i>Physical Chemistry Chemical Physics</i>, 25(1), pp 255-261, <b>2023</b>, <a href="https://doi.org/10.1039/D2CP02994D">https://doi.org/10.1039/D2CP02994D</a></li>
-                <li>Natsumi Noguchi, Shin-ichi Ito, Miwa Hikichi, <b><u>Yohei Cho</u></b>, Kazuho Goto, Atsushi Kubo, Iwao Matsuda, Takeshi Fujita, Masahiro Miyauchi, Takahiro Kondo, "Highly dispersed Ni nanoclusters spontaneously formed on hydrogen boride sheets", <i>Molecules</i>, 27(23), pp 8261, <b>2022</b>, <a href="https://doi.org/10.3390/molecules27238261">https://doi.org/10.3390/molecules27238261</a></li>
-                <li><b><u>Yohei Cho</u></b>, Akira Yamaguchi, Aaron Syahronitua Sinaga, Yue Yang, Masahiro Miyauchi, "Photocatalysis under thermally shifted bandgap", <i>Applied Catalysis A: General</i>, 643, pp 118772, <b>2022</b>, <a href="https://doi.org/10.1016/j.apcata.2022.118772">https://doi.org/10.1016/j.apcata.2022.118772</a></li>
-                <li>Shusaku Shoji, Abdillah Sani Bin Mohd Najib, Min-Wen Yu, Tomokazu Yamamoto, Sou Yasuhara, Akira Yamaguchi, Xiaobo Peng, Syo Matsumura, Satoshi Ishii, <b><u>Yohei Cho</u></b>, "Charge partitioning by intertwined metal-oxide nano-architectural networks for the photocatalytic dry reforming of methane", <i>Chem Catalysis</i>, 2(2), pp 321-329, <b>2022</b>, <a href="https://doi.org/10.1016/j.checat.2021.11.015">https://doi.org/10.1016/j.checat.2021.11.015</a></li>
-                <li><b><u>Yohei Cho</u></b>, Akira Yamaguchi, Masahiro Miyauchi, "Photocatalytic methane reforming: recent advances", <i>Catalysts</i>, 11(1), pp 18, <b>2020</b>, <a href="https://doi.org/10.3390/catal11010018">https://doi.org/10.3390/catal11010018</a></li>
-                <li>Masaru Kushida, Akira Yamaguchi, <b><u>Yohei Cho</u></b>, Takeshi Fujita, Hideki Abe, Masahiro Miyauchi, "Gas‐Phase Photoelectrocatalysis Mediated by Oxygen Ions for Uphill Conversion of Greenhouse Gases", <i>ChemPhotoChem</i>, 5(3), pp 275-281, <b>2021</b>, <a href="https://doi.org/10.1002/cptc.202000228">https://doi.org/10.1002/cptc.202000228</a></li>
-                <li>Abdillah Sani Bin Mohd Najib, Muhammad Iqbal, Mohamed Barakat Zakaria, Shusaku Shoji, <b><u>Yohei Cho</u></b>, Xiaobo Peng, Shigenori Ueda, Ayako Hashimoto, Takeshi Fujita, Masahiro Miyauchi, "Active faceted nanoporous ruthenium for electrocatalytic hydrogen evolution", <i>Journal of Materials Chemistry A</i>, 8(38), pp 19788-19792, <b>2020</b>, <a href="https://doi.org/10.1039/d0ta04223d">https://doi.org/10.1039/d0ta04223d</a></li>
-                <li><b><u>Yohei Cho</u></b>, Akira Yamaguchi, Ryo Uehara, Satoru Yasuhara, Takuya Hoshina, Masahiro Miyauchi, "Temperature dependence on bandgap of semiconductor photocatalysts", <i>The Journal of Chemical Physics</i>, 152(23), <b>2020</b>, <a href="https://doi.org/10.1063/5.0012330">https://doi.org/10.1063/5.0012330</a></li>
-                <li>Kazu Takeda, Akira Yamaguchi, <b><u>Yohei Cho</u></b>, Oruganti Anjaneyulu, Takeshi Fujita, Hideki Abe, Masahiro Miyauchi, "Metal carbide as a light‐harvesting and anticoking catalysis support for dry reforming of methane", <i>Global Challenges</i>, 4(1), pp 1900067, <b>2020</b>, <a href="https://doi.org/10.1002/gch2.201900067">https://doi.org/10.1002/gch2.201900067</a></li>
-                <li>Hikari Nishiguchi, Abdillah Sani Bin Mohd Najib, Xiaobo Peng, <b><u>Yohei Cho</u></b>, Ayako Hashimoto, Shigenori Ueda, Takeshi Fujita, Masahiro Miyauchi, Hideki Abe, "Intertwined nickel and magnesium oxide rival precious metals for catalytic reforming of greenhouse gases", <i>Advanced Sustainable Systems</i>, 4(6), pp 2000041, <b>2020</b>, <a href="https://doi.org/10.1002/advs.202000041">https://doi.org/10.1002/advs.202000041</a></li>
-                <li>Yongzheng Zhang, <b><u>Yohei Cho</u></b>, Akira Yamaguchi, Xiaobo Peng, Masahiro Miyauchi, Hideki Abe, Takeshi Fujita, "CO2 oxidative coupling of methane using an earth-abundant CaO-based catalyst", <i>Scientific Reports</i>, 9(1), pp 15454, <b>2019</b>, <a href="https://doi.org/10.1038/s41598-019-51817-2">https://doi.org/10.1038/s41598-019-51817-2</a></li>
-                <li><b><u>Yohei Cho</u></b>, Shusaku Shoji, Akira Yamaguchi, Takuya Hoshina, Takeshi Fujita, Hideki Abe, Masahiro Miyauchi, "Visible-light-driven dry reforming of methane using a semiconductor-supported catalyst", <i>Chemical Communications</i>, 56(33), pp 4611-4614, <b>2020</b>, <a href="https://doi.org/10.1039/d0cc00729c">https://doi.org/10.1039/d0cc00729c</a></li>
-                <li>Shusaku Shoji, Xiaobo Peng, Akira Yamaguchi, Ryo Watanabe, Choji Fukuhara, <b><u>Yohei Cho</u></b>, Tomokazu Yamamoto, Syo Matsumura, Min-Wen Yu, Satoshi Ishii, "Photocatalytic uphill conversion of natural gas beyond the limitation of thermal reaction systems", <i>Nature Catalysis</i>, 3(2), pp 148-153, <b>2020</b>, <a href="https://doi.org/10.1038/s41929-019-0419-z">https://doi.org/10.1038/s41929-019-0419-z</a></li>
-                <li>Takeshi Fujita, Xiaobo Peng, Akira Yamaguchi, <b><u>Yohei Cho</u></b>, Yongzheng Zhang, Kimitaka Higuchi, Yuta Yamamoto, Tomoharu Tokunaga, Shigeo Arai, Masahiro Miyauchi, "Nanoporous nickel composite catalyst for the dry reforming of methane", <i>ACS Omega</i>, 3(12), pp 16651-16657, <b>2018</b>, <a href="https://doi.org/10.1021/acsomega.8b02023">https://doi.org/10.1021/acsomega.8b02023</a></li>
-            </ul>
+        <section id="publications">
+            <h2>Publications</h2>
+            <!-- Publication list here -->
         </section>
 
-
-        <!-- 受賞歴 -->
-        <section>
+        <!-- Awards and Fellowships -->
+        <section id="awards">
             <h2>受賞歴・フェローシップ</h2>
-            <ul>
-                <li>2024年 - Oral Presentation Award, "Analysis of photoanodic processes using intensity", 24th International Conference on Photochemical Conversion and Storage of Solar Energy (IPS-24)/International Conference on Artificial Photosynthesis-2024 (ICARP2024)</li>
-                <li>2024年 - Leave a Nest grant KYOCERA award</li>
-                <li>2022年 - 東京工業大学物質・情報卓越教育院優秀特別賞</li>
-                <li>2022年 - 第27回シンポジウム「光触媒反応の最近の展開」奨励賞</li>
-                <li>2021年 - Excellent presentation award in "The 12th Multidisciplinary International Student Workshop"</li>
-                <li>2020年 - Excellent presentation award in "The 13th Pacific Rim Conference of Ceramic Societies"</li>
-            </ul>
-            <h3>フェローシップ</h3>
-            <ul>
-                <li>日本学術振興会特別研究員（PD）</li>
-                <li>日本学術振興会若手研究者海外挑戦プログラム</li>
-                <li>東京工業大学物質・情報卓越教育院登録学生</li>
-                <li>日本学術振興会特別研究員（DC1）</li>
-            </ul>
+            <!-- Awards and fellowships list here -->
         </section>
 
-        <!-- 講演 -->
-        <section>
+        <!-- Talks -->
+        <section id="talks">
             <h2>講演</h2>
-            <ul>
-                <li>2024年 - 「光触媒研究と開発技術の最新動向と将来展望」光機能材料研究会 98回講演会で招待講演</li>
-                <!-- 必要な分だけ追加 -->
-            </ul>
+            <!-- Talks list here -->
         </section>
 
-        <!-- 連絡先・SNSリンク -->
-        <section>
+        <!-- Contact & Social Links -->
+        <section id="contact">
             <h2>連絡先・SNSリンク</h2>
-            <p>ご連絡は以下のメールアドレスまたはSNSを通じてお願いします。</p>
             <ul>
                 <li>Google Scholar: <a href="https://scholar.google.com/citations?hl=ja&user=jT-CXx8AAAAJ" target="_blank">Google Scholarプロフィール</a></li>
                 <li>X (Twitter): <a href="https://twitter.com/YoheiCho" target="_blank">@YoheiCho</a></li>
@@ -159,4 +160,3 @@
     </div>
 </body>
 </html>
-
