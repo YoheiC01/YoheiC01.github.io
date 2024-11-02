@@ -26,8 +26,13 @@
             margin: 0 auto;
             padding: 20px;
         }
-        h1, h2 {
+        h1 {
             color: #444;
+            text-align: center; /* 名前を中央揃えに */
+        }
+        h2 {
+            color: #444;
+            scroll-margin-top: 90px; /* ナビゲーションの高さ分の余白を設定 */
         }
         section {
             margin-bottom: 30px;
@@ -76,9 +81,6 @@
             background-color: #333;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
-        h2 {
-            scroll-margin-top: 60px; /* ナビゲーションの高さ分の余白を設定 */
-        }
     </style>
 </head>
 <body>
@@ -105,7 +107,7 @@
         <!-- Profile -->
         <section id="profile">
             <h2>Profile (自己紹介)</h2>
-            <p>I am a researcher focused on photocatalysis (光触媒研究者).</p>
+            <p>I am a researcher focused on photocatalysis.</p>
         </section>
 
         <!-- Career History -->
