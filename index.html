@@ -99,32 +99,43 @@
         color: #666;
     }
     
-    /* モバイル対応の追加スタイル */
+    /* 通常のスタイルはそのままで、モバイル専用のスタイルを追加 */
     @media (max-width: 768px) {
-        .container {
-            padding: 15px;
-        }
-        h1 {
-            font-size: 1.8em;
-        }
-        h2 {
-            font-size: 1.4em;
-        }
-        .profile-pic {
-            width: 120px;
-        }
         .nav ul {
+            display: none; /* 初期状態ではナビゲーションを非表示 */
             flex-direction: column;
-            padding: 10px 0;
-            text-align: center;
+            padding: 0;
+            margin: 0;
+            background-color: #ffffff;
+            width: 100%;
         }
         .nav ul li {
-            margin-bottom: 10px;
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
         }
-        .dual-language-list .jp_bg {
-            padding-left: 20px;
+        .menu-toggle {
+            display: block;
+            font-size: 18px;
+            padding: 10px;
+            background-color: #0073e6;
+            color: #fff;
+            border: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
         }
     }
+
+/* メニューが表示されたとき */
+@media (max-width: 768px) {
+    .menu-toggle:focus + ul,
+    .menu-toggle:active + ul {
+        display: block;
+    }
+}
+
 
     @media (max-width: 480px) {
         h1 {
@@ -146,21 +157,28 @@
 </style>
 
 </head>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
 <body>
-    <div class="container">
-        <!-- Sticky Navigation Bar -->
-        <div class="nav">
-            <ul>
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#background">Background</a></li>
-                <li><a href="#research">Research Areas</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#awards">Awards</a></li>
-                <li><a href="#fellowships">Fellowships</a></li>
-                <li><a href="#talks">Invited Talks</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+    <div class="nav">
+        <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+        <ul id="nav-links">
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#background">Background</a></li>
+            <li><a href="#research">Research Areas</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#fellowships">Fellowships</a></li>
+            <li><a href="#talks">Invited Talks</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
 
         <!-- Header with Profile Picture and Name -->
         <h1>Yohei Cho 張　葉平</h1>
