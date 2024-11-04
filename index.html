@@ -19,7 +19,7 @@
         color: #333;
         line-height: 1.6;
         margin: 0;
-        padding: 0;
+        padding: 0 20px; /* ページ全体の左右に余白を追加 */
     }
     .menu-toggle {
         display: none;
@@ -155,13 +155,22 @@
     }
 </style>
 
-</head>
-    <script>
-        function toggleMenu() {
-            const navLinks = document.getElementById('nav-links');
-            navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
-        }
-    </script>
+<script>
+    function toggleMenu() {
+        const navLinks = document.getElementById('nav-links');
+        navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // ナビゲーションリンクをクリックするとメニューが閉じるのはモバイルのみ
+    if (window.innerWidth <= 768) {
+        document.querySelectorAll('#nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.getElementById('nav-links');
+                navLinks.style.display = 'none';
+            });
+        });
+    }
+</script>
 
 <body>
     <div class="nav">
