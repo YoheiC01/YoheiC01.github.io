@@ -47,6 +47,33 @@
             background-color: #ffffff;
             width: 100%;
         }
+
+        .nav ul li {
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu-toggle:focus + ul,
+        .menu-toggle:active + ul {
+            display: block;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 1.5em;
+        }
+        .profile-pic {
+            width: 100px;
+        }
+        .dual-language-list li {
+            font-size: 0.9em;
+        }
+        .dual-language-list .jp, .dual-language-list .jp_bg {
+            padding-left: 10px;
+        }
     }
 
     .container {
@@ -125,62 +152,6 @@
     .dual-language-list .jp_bg {
         padding-left: 100px;
         color: #666;
-    }
-    
-    /* 通常のスタイルはそのままで、モバイル専用のスタイルを追加 */
-    @media (max-width: 768px) {
-        .nav ul {
-            display: none; /* 初期状態ではナビゲーションを非表示 */
-            flex-direction: column;
-            padding: 0;
-            margin: 0;
-            background-color: #ffffff;
-            width: 100%;
-        }
-        .nav ul li {
-            margin: 0;
-            padding: 10px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
-        .menu-toggle {
-            display: block;
-            font-size: 18px;
-            padding: 10px;
-            background-color: #ffffff; /* メニュー背景を白に変更 */
-            color: #333; /* 文字色をグレーに変更 */
-            border: none;
-            width: 100%;
-            text-align: left;
-            cursor: pointer;
-        }
-    }
-
-/* メニューが表示されたとき */
-@media (max-width: 768px) {
-    .menu-toggle:focus + ul,
-    .menu-toggle:active + ul {
-        display: block;
-    }
-}
-
-
-    @media (max-width: 480px) {
-        h1 {
-            font-size: 1.5em;
-        }
-        .profile-pic {
-            width: 100px;
-        }
-        .nav ul {
-            flex-direction: column;
-        }
-        .dual-language-list li {
-            font-size: 0.9em;
-        }
-        .dual-language-list .jp, .dual-language-list .jp_bg {
-            padding-left: 10px;
-        }
     }
 </style>
 
