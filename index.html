@@ -331,5 +331,19 @@
             </ul>
         </section>
     </div>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
+        }
+    
+        // ナビゲーションリンクをクリックするとメニューが閉じるように設定
+        document.querySelectorAll('#nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.getElementById('nav-links');
+                navLinks.style.display = 'none';
+            });
+        });
+    </script>
 </body>
 </html>
