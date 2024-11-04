@@ -13,92 +13,138 @@
         gtag('js', new Date());
         gtag('config', 'G-LZNKP1XTY0');
     </script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        color: #333;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    h1 {
+        color: #444;
+        text-align: center;
+    }
+    h2 {
+        color: #444;
+        scroll-margin-top: 1500px;
+    }
+    section {
+        margin-bottom: 30px;
+    }
+    .profile-pic {
+        display: block;
+        margin: 0 auto;
+        width: 150px;
+        border-radius: 50%;
+        background: #ccc;
+        object-fit: cover;
+    }
+    a {
+        color: #0073e6;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    .nav {
+        position: sticky;
+        top: 0;
+        background: #ffffff;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+        z-index: 1000;
+    }
+    .nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        margin: 0;
+    }
+    .nav ul li a {
+        font-weight: bold;
+        font-size: 14px;
+        color: #444;
+        padding: 6px 12px;
+        border-radius: 15px;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+    }
+    .nav ul li a:hover {
+        color: #fff;
+        background-color: #333;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    /* Style adjustments for aligned bilingual list */
+    .dual-language-list ul {
+        list-style: none;
+        padding: 0;
+    }
+    .dual-language-list li {
+        margin-bottom: 15px;
+    }
+    .dual-language-list .jp {
+        padding-left: 50px;
+        color: #666;
+    }
+    /* Special indent for Background section */
+    .dual-language-list .jp_bg {
+        padding-left: 100px;
+        color: #666;
+    }
+    
+    /* モバイル対応の追加スタイル */
+    @media (max-width: 768px) {
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            padding: 15px;
         }
         h1 {
-            color: #444;
-            text-align: center;
+            font-size: 1.8em;
         }
         h2 {
-            color: #444;
-            scroll-margin-top: 1500px;
-        }
-        section {
-            margin-bottom: 30px;
+            font-size: 1.4em;
         }
         .profile-pic {
-            display: block;
-            margin: 0 auto;
-            width: 150px;
-            border-radius: 50%;
-            background: #ccc;
-            object-fit: cover;
-        }
-        a {
-            color: #0073e6;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .nav {
-            position: sticky;
-            top: 0;
-            background: #ffffff;
-            padding: 10px 0;
-            border-bottom: 1px solid #ddd;
-            z-index: 1000;
+            width: 120px;
         }
         .nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: space-around;
-            padding: 0;
-            margin: 0;
+            flex-direction: column;
+            padding: 10px 0;
+            text-align: center;
         }
-        .nav ul li a {
-            font-weight: bold;
-            font-size: 14px;
-            color: #444;
-            padding: 6px 12px;
-            border-radius: 15px;
-            transition: all 0.3s ease;
-            white-space: nowrap;
+        .nav ul li {
+            margin-bottom: 10px;
         }
-        .nav ul li a:hover {
-            color: #fff;
-            background-color: #333;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        .dual-language-list .jp_bg {
+            padding-left: 20px;
         }
-        /* Style adjustments for aligned bilingual list */
-        .dual-language-list ul {
-            list-style: none;
-            padding: 0;
+    }
+
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 1.5em;
+        }
+        .profile-pic {
+            width: 100px;
+        }
+        .nav ul {
+            flex-direction: column;
         }
         .dual-language-list li {
-            margin-bottom: 15px;
+            font-size: 0.9em;
         }
-        .dual-language-list .jp {
-            padding-left: 50px;
-            color: #666;
+        .dual-language-list .jp, .dual-language-list .jp_bg {
+            padding-left: 10px;
         }
-        /* Special indent for Background section */
-        .dual-language-list .jp_bg {
-            padding-left: 100px;
-            color: #666;
-        }
-    </style>
+    }
+</style>
+
 </head>
 <body>
     <div class="container">
