@@ -19,7 +19,7 @@
         color: #333;
         line-height: 1.6;
         margin: 0;
-        padding: 0 20px; /* ページ全体の左右に余白を追加 */
+        padding: 0 20px;
     }
     .menu-toggle {
         display: none;
@@ -40,7 +40,7 @@
         }
 
         .nav ul {
-            display: none; /* 初期状態ではナビゲーションを非表示 */
+            display: none;
             flex-direction: column;
             padding: 0;
             margin: 0;
@@ -55,8 +55,8 @@
             border-bottom: 1px solid #ddd;
         }
 
-        .menu-toggle:focus + ul,
-        .menu-toggle:active + ul {
+        .menu-toggle:focus + #nav-links,
+        .menu-toggle:active + #nav-links {
             display: block;
         }
     }
@@ -148,7 +148,6 @@
         padding-left: 50px;
         color: #666;
     }
-    /* Special indent for Background section */
     .dual-language-list .jp_bg {
         padding-left: 100px;
         color: #666;
@@ -157,20 +156,31 @@
 
 <script>
     function toggleMenu() {
-        // 768px以下のスクリーン幅でのみメニューを切り替える
+        const navLinks = document.getElementById('nav-links');
         if (window.innerWidth <= 768) {
-            const navLinks = document.getElementById('nav-links');
             navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
+        } else {
+            navLinks.style.display = 'flex'; // デスクトップ画面では常に表示
         }
     }
 
-    // モバイルのみでリンクをクリックするとメニューが閉じるように設定
-    document.querySelectorAll('#nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (window.innerWidth <= 768) {
-                const navLinks = document.getElementById('nav-links');
-                navLinks.style.display = 'none';
-            }
+    window.addEventListener('resize', () => {
+        const navLinks = document.getElementById('nav-links');
+        if (window.innerWidth > 768) {
+            navLinks.style.display = 'flex'; // デスクトップ画面では常に表示
+        } else {
+            navLinks.style.display = 'none'; // モバイルでは初期状態で非表示
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('#nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    const navLinks = document.getElementById('nav-links');
+                    navLinks.style.display = 'none';
+                }
+            });
         });
     });
 </script>
