@@ -157,20 +157,24 @@
 
 <script>
     function toggleMenu() {
-        const navLinks = document.getElementById('nav-links');
-        navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
+        // 768px以下のスクリーン幅でのみメニューを切り替える
+        if (window.innerWidth <= 768) {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
+        }
     }
 
-    // ナビゲーションリンクをクリックするとメニューが閉じるのはモバイルのみ
-    if (window.innerWidth <= 768) {
-        document.querySelectorAll('#nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
+    // モバイルのみでリンクをクリックするとメニューが閉じるように設定
+    document.querySelectorAll('#nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
                 const navLinks = document.getElementById('nav-links');
                 navLinks.style.display = 'none';
-            });
+            }
         });
-    }
+    });
 </script>
+
 
 <body>
     <div class="nav">
