@@ -40,7 +40,7 @@
         }
 
         .nav ul {
-            display: none;
+            display: none; /* 初期状態ではナビゲーションを非表示 */
             flex-direction: column;
             padding: 0;
             margin: 0;
@@ -54,25 +54,11 @@
             text-align: center;
             border-bottom: 1px solid #ddd;
         }
-
-        .menu-toggle:focus + #nav-links,
-        .menu-toggle:active + #nav-links {
-            display: block;
-        }
     }
 
-    @media (max-width: 480px) {
-        h1 {
-            font-size: 1.5em;
-        }
-        .profile-pic {
-            width: 100px;
-        }
-        .dual-language-list li {
-            font-size: 0.9em;
-        }
-        .dual-language-list .jp, .dual-language-list .jp_bg {
-            padding-left: 10px;
+    @media (min-width: 769px) {
+        .nav ul {
+            display: flex !important; /* デスクトップでは常に表示 */
         }
     }
 
@@ -117,10 +103,9 @@
     }
     .nav ul {
         list-style: none;
-        display: flex;
-        justify-content: space-around;
         padding: 0;
         margin: 0;
+        justify-content: space-around;
     }
     .nav ul li a {
         font-weight: bold;
@@ -136,22 +121,6 @@
         background-color: #333;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     }
-    /* Style adjustments for aligned bilingual list */
-    .dual-language-list ul {
-        list-style: none;
-        padding: 0;
-    }
-    .dual-language-list li {
-        margin-bottom: 15px;
-    }
-    .dual-language-list .jp {
-        padding-left: 50px;
-        color: #666;
-    }
-    .dual-language-list .jp_bg {
-        padding-left: 100px;
-        color: #666;
-    }
 </style>
 
 <script>
@@ -159,32 +128,28 @@
         const navLinks = document.getElementById('nav-links');
         if (window.innerWidth <= 768) {
             navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
-        } else {
-            navLinks.style.display = 'flex'; // デスクトップ画面では常に表示
         }
     }
 
     window.addEventListener('resize', () => {
         const navLinks = document.getElementById('nav-links');
         if (window.innerWidth > 768) {
-            navLinks.style.display = 'flex'; // デスクトップ画面では常に表示
+            navLinks.style.display = 'flex'; // デスクトップでは常に表示
         } else {
-            navLinks.style.display = 'none'; // モバイルでは初期状態で非表示
+            navLinks.style.display = 'none'; // モバイルでは非表示に戻す
         }
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('#nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    const navLinks = document.getElementById('nav-links');
-                    navLinks.style.display = 'none';
-                }
-            });
-        });
     });
 </script>
 
+<nav class="nav">
+    <button class="menu-toggle" onclick="toggleMenu()">Menu</button>
+    <ul id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
 <body>
     <div class="nav">
