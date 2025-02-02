@@ -1,297 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yohei Cho 張　葉平</title>
-  
-  <!-- Google Fonts (例：Roboto) -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-
-  <!-- Google Analytics Tracking Code -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-LZNKP1XTY0');
-  </script>
-
-  <style>
-    /* カラーパレット・CSS変数 */
-    :root {
-      --primary-color: #0073e6;
-      --accent-color: #333;
-      --bg-color: #f9f9f9;
-      --text-color: #333;
-      --header-color: #444;
-      --hover-bg-color: #333;
-      --card-bg: #fff;
-      --card-shadow: rgba(0, 0, 0, 0.1);
-    }
-
-    /* リセット＆基本設定 */
-    * {
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yohei Cho 張　葉平</title>
+    
+    <!-- Google Analytics Tracking Code -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-LZNKP1XTY0');
+    </script>
+<style>
     body {
-      font-family: 'Roboto', Arial, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      margin: 0;
-      padding: 0 20px;
-    }
-    a {
-      color: var(--primary-color);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    a:hover {
-      color: var(--hover-bg-color);
-    }
-
-    /* コンテナ */
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    /* 見出し */
-    h1 {
-      color: var(--header-color);
-      text-align: center;
-      margin-top: 20px;
-    }
-    h2 {
-      color: var(--header-color);
-      margin-bottom: 10px;
-      position: relative;
-      padding-bottom: 5px;
-    }
-    h2::after {
-      content: "";
-      width: 50px;
-      height: 3px;
-      background: var(--primary-color);
-      position: absolute;
-      left: 0;
-      bottom: 0;
-    }
-
-    /* アニメーション */
-    .fade-in {
-      animation: fadeIn 1s ease-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ナビゲーション */
-    .nav {
-      position: sticky;
-      top: 0;
-      background: #fff;
-      padding: 10px 0;
-      border-bottom: 1px solid #ddd;
-      z-index: 1000;
-    }
-    .nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: space-around;
-    }
-    .nav ul li a {
-      font-weight: bold;
-      font-size: 14px;
-      color: var(--accent-color);
-      padding: 6px 12px;
-      border-radius: 15px;
-      transition: all 0.3s ease;
-      white-space: nowrap;
-    }
-    .nav ul li a:hover {
-      color: #fff;
-      background-color: var(--accent-color);
-      box-shadow: 0px 4px 10px var(--card-shadow);
+        font-family: Arial, sans-serif;
+        color: #333;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0 20px;
     }
     .menu-toggle {
-      display: none;
-      font-size: 18px;
-      padding: 10px;
-      background-color: #fff;
-      color: var(--accent-color);
-      border: none;
-      width: 100%;
-      text-align: left;
-      cursor: pointer;
-    }
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-      .nav ul {
         display: none;
-        flex-direction: column;
-        background: #fff;
-        width: 100%;
-      }
-      .nav ul li {
-        border-bottom: 1px solid #ddd;
-        text-align: center;
-      }
     }
+
+    /* Show menu-toggle only on mobile screens */
+    @media (max-width: 768px) {
+        .menu-toggle {
+            display: block;
+            font-size: 18px;
+            padding: 10px;
+            background-color: #ffffff;
+            color: #333;
+            border: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .nav ul {
+            display: none; /* 初期状態ではナビゲーションを非表示 */
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+            background-color: #ffffff;
+            width: 100%;
+        }
+
+        .nav ul li {
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+    }
+
     @media (min-width: 769px) {
-      .nav ul {
-        display: flex !important;
-      }
+        .nav ul {
+            display: flex !important; /* デスクトップでは常に表示 */
+        }
     }
 
-    /* 各セクションのスタイル */
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    h1 {
+        color: #444;
+        text-align: center;
+    }
+    h2 {
+        color: #444;
+        scroll-margin-top: 1500px;
+    }
     section {
-      margin-bottom: 40px;
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px var(--card-shadow);
+        margin-bottom: 30px;
     }
-
-    /* Research Keywords リストのカード風スタイル */
-    #profile ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 10px;
-    }
-    #profile ul li {
-      background: var(--card-bg);
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      padding: 10px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    #profile ul li:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 8px var(--card-shadow);
-    }
-
-    /* プロフィール画像 */
     .profile-pic {
-      display: block;
-      margin: 20px auto;
-      width: 150px;
-      border-radius: 50%;
-      background: #ccc;
-      object-fit: cover;
+        display: block;
+        margin: 0 auto;
+        width: 150px;
+        border-radius: 50%;
+        background: #ccc;
+        object-fit: cover;
     }
-  </style>
+    a {
+        color: #0073e6;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    .nav {
+        position: sticky;
+        top: 0;
+        background: #ffffff;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+        z-index: 1000;
+    }
+    .nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        justify-content: space-around;
+    }
+    .nav ul li a {
+        font-weight: bold;
+        font-size: 14px;
+        color: #444;
+        padding: 6px 12px;
+        border-radius: 15px;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+    }
+    .nav ul li a:hover {
+        color: #fff;
+        background-color: #333;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+</style>
 
-  <script>
+<script>
     function toggleMenu() {
-      const navLinks = document.getElementById('nav-links');
-      if (window.innerWidth <= 768) {
-        navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
-      }
+        const navLinks = document.getElementById('nav-links');
+        if (window.innerWidth <= 768) {
+            navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
+        }
     }
 
     window.addEventListener('resize', () => {
-      const navLinks = document.getElementById('nav-links');
-      if (window.innerWidth > 768) {
-        navLinks.style.display = 'flex';
-      } else {
-        navLinks.style.display = 'none';
-      }
+        const navLinks = document.getElementById('nav-links');
+        if (window.innerWidth > 768) {
+            navLinks.style.display = 'flex'; // デスクトップでは常に表示
+        } else {
+            navLinks.style.display = 'none'; // モバイルでは非表示に戻す
+        }
     });
+</script>
 
-    // ナビゲーションリンクをクリックするとメニューを閉じる
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('#nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-          const navLinks = document.getElementById('nav-links');
-          navLinks.style.display = 'none';
-        });
-      });
-    });
-  </script>
-</head>
 <body>
-  <div class="nav">
-    <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
-    <ul id="nav-links">
-      <li><a href="#profile">Research Keywords</a></li>
-      <li><a href="#background">Background</a></li>
-      <li><a href="#research">Research Areas</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#awards">Awards</a></li>
-      <li><a href="#fellowships">Fellowships</a></li>
-      <li><a href="#talks">Invited Talks</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-
-  <div class="container">
-    <!-- Header with Profile Picture and Name -->
-    <h1 class="fade-in">Yohei Cho 張　葉平</h1>
-    <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic fade-in" />
-
-    <!-- Research Keywords (formerly Profile) -->
-    <section id="profile" class="fade-in">
-      <h2>Research Keywords / 研究キーワード</h2>
-      <ul>
-        <li>Photocatalysis (光触媒)</li>
-        <li>Photoelectrochemistry (光電気化学)</li>
-        <li>High-throughput Experimentation (ハイスループット実験)</li>
-        <li>Machine Learning (機械学習)</li>
-      </ul>
-    </section>
-
-    <!-- Background -->
-    <section id="background" class="fade-in">
-      <h2>Background</h2>
-      <div class="dual-language-list">
-        <ul>
-          <li>
-            <div class="eng">2024 – Present - JSPS Postdoctoral Fellow (PD), Japan Advanced Institute of Science and Technology</div>
-            <div class="jp_bg">- 日本学術振興会特別研究員PD 北陸先端科学技術大学院大学</div>
-          </li>
-          <li>
-            <div class="eng">2023 – 2024 - JSPS Postdoctoral Fellow (PD), Tokyo Institute of Technology</div>
-            <div class="jp_bg">- 日本学術振興会特別研究員PD 東京工業大学</div>
-          </li>
-          <li>
-            <div class="eng">2022 – 2022 - Visiting Student, Department of Chemistry, Imperial College London</div>
-          </li>
-          <li>
-            <div class="eng">2021 – 2023 - Ph.D. in Materials Science and Engineering, Tokyo Institute of Technology</div>
-            <div class="jp_bg">- 東京工業大学物質理工学院材料系 博士課程</div>
-          </li>
-          <li>
-            <div class="eng">2019 – 2021 - M.Sc. in Materials Science and Engineering, Tokyo Institute of Technology</div>
-            <div class="jp_bg">- 東京工業大学物質理工学院材料系 修士課程</div>
-          </li>
-          <li>
-            <div class="eng">2015 – 2019 - B.Sc. in Inorganic Materials Science, Tokyo Institute of Technology</div>
-            <div class="jp_bg">- 東京工業大学無機材料工学科 学士課程</div>
-          </li>
+    <div class="nav">
+        <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+        <ul id="nav-links">
+            <li><a href="#background">Background</a></li>
+            <li><a href="#research">Research Areas</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#fellowships">Fellowships</a></li>
+            <li><a href="#talks">Invited Talks</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
-    </section>
+    </div>
 
-    <!-- Research Areas -->
-    <section id="research" class="fade-in">
-      <h2>Research Areas</h2>
-      <p>Photocatalysis, Photoelectrochemistry, High-throughput Experimentation, Machine Learning</p>
-      <p>光触媒、光電気化学、ハイスループット実験、機械学習</p>
-    </section>
-    
-    <!-- Publications (一部のみ掲載) -->
+
+        <!-- Header with Profile Picture and Name -->
+        <h1>Yohei Cho 張　葉平</h1>
+        <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+
+        <!-- Background -->
+        <section id="background">
+            <h2>Background</h2>
+            <div class="dual-language-list">
+                <ul>
+                    <li>
+                        <div class="eng">2024 – Present - JSPS Postdoctoral Fellow (PD), Japan Advanced Institute of Science and Technology</div>
+                        <div class="jp_bg">- 日本学術振興会特別研究員PD 北陸先端科学技術大学院大学</div>
+                    </li>
+                    <li>
+                        <div class="eng">2023 – 2024 - JSPS Postdoctoral Fellow (PD), Tokyo Institute of Technology</div>
+                        <div class="jp_bg">- 日本学術振興会特別研究員PD 東京工業大学</div>
+                    </li>
+                    <li>
+                        <div class="eng">2022 – 2022 - Visiting Student, Department of Chemistry, Imperial College London</div>
+                    </li>
+                    <li>
+                        <div class="eng">2021 – 2023 - Ph.D. in Materials Science and Engineering, Tokyo Institute of Technology</div>
+                        <div class="jp_bg">- 東京工業大学物質理工学院材料系 博士課程</div>
+                    </li>
+                    <li>
+                        <div class="eng">2019 – 2021 - M.Sc. in Materials Science and Engineering, Tokyo Institute of Technology</div>
+                        <div class="jp_bg">- 東京工業大学物質理工学院材料系 修士課程</div>
+                    </li>
+                    <li>
+                        <div class="eng">2015 – 2019 - B.Sc. in Inorganic Materials Science, Tokyo Institute of Technology</div>
+                        <div class="jp_bg">- 東京工業大学無機材料工学科 学士課程</div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Research Areas -->
+        <section id="research">
+            <h2>Research Areas</h2>
+            <p>Photocatalysis, Photoelectrochemistry, High-throughput Experimentation, Machine Learning</p>
+            <p>光触媒、光電気化学、ハイスループット実験、機械学習</p>
+        </section>
+        
+        <!-- Publications -->
         <section id="publications">
             <h2>Publications</h2>
             <ol reversed>
@@ -316,95 +224,102 @@
             </ol>
         </section>
 
+        <!-- Awards -->
+        <section id="awards">
+            <h2>Awards</h2>
+            <div class="dual-language-list">
+                <ul>
+                    <li>
+                        <div class="eng">2024 - Oral Presentation Award, 24th International Conference on Photochemical Conversion and Storage of Solar Energy (IPS-24) / International Conference on Artificial Photosynthesis-2024 (ICARP2024)</div>
+                    </li>
+                    <li>
+                        <div class="eng">2024 - Leave a Nest grant KYOCERA award</div>
+                        <div class="jp">- リバネス助成 京セラ賞</div>
+                    </li>
+                    <li>
+                        <div class="eng">2022 - Tokyo Tech Excellence Award, Tokyo Tech Academy for Convergence of Materials and Informatics (TAC-MI)</div>
+                        <div class="jp">- 東京工業大学物質・情報卓越教育院（TAC-MI）優秀特別賞</div>
+                    </li>
+                    <li>
+                        <div class="eng">2022 - Encouragement Award, 27th Symposium on Recent Developments in Photocatalysis</div>
+                        <div class="jp">- 第27回シンポジウム「光触媒反応の最近の展開」奨励賞</div>
+                    </li>
+                    <li>
+                        <div class="eng">2021 - Excellent Presentation Award at "The 12th Multidisciplinary International Student Workshop"</div>
+                    </li>
+                    <li>
+                        <div class="eng">2020 - Excellent Presentation Award at "The 13th Pacific Rim Conference of Ceramic Societies"</div>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-    <!-- Awards -->
-    <section id="awards" class="fade-in">
-      <h2>Awards</h2>
-      <div class="dual-language-list">
-        <ul>
-          <li>
-            <div class="eng">2024 - Oral Presentation Award, 24th International Conference on Photochemical Conversion and Storage of Solar Energy (IPS-24) / International Conference on Artificial Photosynthesis-2024 (ICARP2024)</div>
-          </li>
-          <li>
-            <div class="eng">2024 - Leave a Nest grant KYOCERA award</div>
-            <div class="jp">- リバネス助成 京セラ賞</div>
-          </li>
-          <li>
-            <div class="eng">2022 - Tokyo Tech Excellence Award, Tokyo Tech Academy for Convergence of Materials and Informatics (TAC-MI)</div>
-            <div class="jp">- 東京工業大学物質・情報卓越教育院（TAC-MI）優秀特別賞</div>
-          </li>
-          <li>
-            <div class="eng">2022 - Encouragement Award, 27th Symposium on Recent Developments in Photocatalysis</div>
-            <div class="jp">- 第27回シンポジウム「光触媒反応の最近の展開」奨励賞</div>
-          </li>
-          <li>
-            <div class="eng">2021 - Excellent Presentation Award at "The 12th Multidisciplinary International Student Workshop"</div>
-          </li>
-          <li>
-            <div class="eng">2020 - Excellent Presentation Award at "The 13th Pacific Rim Conference of Ceramic Societies"</div>
-          </li>
-        </ul>
-      </div>
-    </section>
+        <!-- Fellowships -->
+        <section id="fellowships">
+            <h2>Fellowships</h2>
+            <div class="dual-language-list">
+                <ul>
+                    <li>
+                        <div class="eng">2024 - JSPS Research Fellowship for Young Scientists (PD)</div>
+                        <div class="jp">- 日本学術振興会特別研究員（PD）</div>
+                    </li>
+                    <li>
+                        <div class="eng">2022 - JSPS Overseas Challenge Program for Young Researchers</div>
+                        <div class="jp"> - 日本学術振興会 若手研究者海外挑戦プログラム</div>
+                    </li>
+                    <li>
+                        <div class="eng">2021 - JSPS Research Fellowship for Young Scientists (DC1)</div>
+                        <div class="jp">- 日本学術振興会特別研究員（DC1）</div>
+                    </li>
+                    <li>
+                        <div class="eng">2019 - Tokyo Tech Academy for Convergence of Materials and Informatics Student (TAC-MI)</div>
+                        <div class="jp">- 東京工業大学物質・情報卓越教育院（TAC-MI）登録学生</div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Invited Talks -->
+        <section id="talks">
+            <h2>Invited Talks</h2>
+            <div class="dual-language-list">
+                <ul>
+                    <li><div class="eng">"The effect of temperature on titania photocatalyst and photoanode," Invited Talk, ACS Spring 2025 Meeting, San Diego, CA & Virtual, March 23-27, 2025</div></li>
+                    <li><div class="eng">"The use of temperature as a parameter in photocatalysis study," Invited Talk, 8th International Conference on Catalysis and Chemical Engineering, Boston, MA, February 26-29, 2025</div></li>
+                    <li><div class="eng">"Estimation of Rate-Limiting Steps in Photocatalysis by Intensity-Modulated Photocurrent Spectroscopy," Invited Talk, 98th Photofunctional Materials Study Group Conference, Online, July 9, 2024</div>
+                        <div class="jp">「強度変調光電流分光法による光触媒律速過程の推定」, 招待講演, 「光触媒研究と開発技術の最新動向と将来展望」光機能材料研究会 第98回講演会, オンライン, 2024年7月9日</div></li>
 
-    <!-- Fellowships -->
-    <section id="fellowships" class="fade-in">
-      <h2>Fellowships</h2>
-      <div class="dual-language-list">
-        <ul>
-          <li>
-            <div class="eng">2024 - JSPS Research Fellowship for Young Scientists (PD)</div>
-            <div class="jp">- 日本学術振興会特別研究員（PD）</div>
-          </li>
-          <li>
-            <div class="eng">2022 - JSPS Overseas Challenge Program for Young Researchers</div>
-            <div class="jp"> - 日本学術振興会 若手研究者海外挑戦プログラム</div>
-          </li>
-          <li>
-            <div class="eng">2021 - JSPS Research Fellowship for Young Scientists (DC1)</div>
-            <div class="jp">- 日本学術振興会特別研究員（DC1）</div>
-          </li>
-          <li>
-            <div class="eng">2019 - Tokyo Tech Academy for Convergence of Materials and Informatics Student (TAC-MI)</div>
-            <div class="jp">- 東京工業大学物質・情報卓越教育院（TAC-MI）登録学生</div>
-          </li>
-        </ul>
-      </div>
-    </section>
+                                                
+                    </li>
+                    <!-- Additional talks as necessary -->
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact & Social Links -->
+        <section id="contact">
+            <h2>Contact & Social Links</h2>
+            <ul>
+                <li>Google Scholar: <a href="https://scholar.google.com/citations?hl=ja&user=jT-CXx8AAAAJ" target="_blank">Google Scholar Profile</a></li>
+                <li>Email: <a href="mailto:yohei-c@jaist.ac.jp">yohei-c@jaist.ac.jp</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/yohei-cho-b8b5b411a/" target="_blank">LinkedIn Profile</a></li>
+                <li>X (Twitter): <a href="https://twitter.com/YoheiCho" target="_blank">@YoheiCho</a></li>
+            </ul>
+        </section>
+    </div>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
+        }
     
-    <!-- Invited Talks -->
-    <section id="talks" class="fade-in">
-      <h2>Invited Talks</h2>
-      <div class="dual-language-list">
-        <ul>
-          <li>
-            <div class="eng">"The effect of temperature on titania photocatalyst and photoanode," Invited Talk, ACS Spring 2025 Meeting, San Diego, CA &amp; Virtual, March 23-27, 2025</div>
-          </li>
-          <li>
-            <div class="eng">"The use of temperature as a parameter in photocatalysis study," Invited Talk, 8th International Conference on Catalysis and Chemical Engineering, Boston, MA, February 26-29, 2025</div>
-          </li>
-          <li>
-            <div class="eng">"Estimation of Rate-Limiting Steps in Photocatalysis by Intensity-Modulated Photocurrent Spectroscopy," Invited Talk, 98th Photofunctional Materials Study Group Conference, Online, July 9, 2024</div>
-            <div class="jp">「強度変調光電流分光法による光触媒律速過程の推定」, 招待講演, 「光触媒研究と開発技術の最新動向と将来展望」光機能材料研究会 第98回講演会, オンライン, 2024年7月9日</div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Contact & Social Links -->
-    <section id="contact" class="fade-in">
-      <h2>Contact &amp; Social Links</h2>
-      <ul>
-        <li>Google Scholar: <a href="https://scholar.google.com/citations?hl=ja&user=jT-CXx8AAAAJ" target="_blank">Google Scholar Profile</a></li>
-        <li>Email: <a href="mailto:yohei-c@jaist.ac.jp">yohei-c@jaist.ac.jp</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/yohei-cho-b8b5b411a/" target="_blank">LinkedIn Profile</a></li>
-        <li>X (Twitter): <a href="https://twitter.com/YoheiCho" target="_blank">@YoheiCho</a></li>
-      </ul>
-    </section>
-  </div>
-
-  <script>
-    // toggleMenu 関数は上記スクリプト内に記載済み
-  </script>
+        // ナビゲーションリンクをクリックするとメニューが閉じるように設定
+        document.querySelectorAll('#nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.getElementById('nav-links');
+                navLinks.style.display = 'none';
+            });
+        });
+    </script>
 </body>
 </html>
