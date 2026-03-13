@@ -3,143 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yohei Cho 張　葉平</title>
-    
-    <!-- Google Analytics Tracking Code -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+
+    <title>Yohei Cho | Photocatalysis, Photoelectrochemistry, High-Throughput Experimentation</title>
+    <meta name="description" content="Yohei Cho is an Assistant Professor at Institute of Science Tokyo. His research focuses on photocatalysis, photoelectrochemistry, high-throughput experimentation, and oxide catalyst discovery.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yoheic01.github.io/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Yohei Cho | Photocatalysis, Photoelectrochemistry, High-Throughput Experimentation">
+    <meta property="og:description" content="Assistant Professor at Institute of Science Tokyo working on photocatalysis, photoelectrochemistry, and high-throughput exploration of functional materials.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoheic01.github.io/">
+    <meta property="og:image" content="https://yoheic01.github.io/profile-pic.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Yohei Cho | Photocatalysis, Photoelectrochemistry, High-Throughput Experimentation">
+    <meta name="twitter:description" content="Assistant Professor at Institute of Science Tokyo working on photocatalysis, photoelectrochemistry, and high-throughput exploration of functional materials.">
+    <meta name="twitter:image" content="https://yoheic01.github.io/profile-pic.jpg">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LZNKP1XTY0"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-LZNKP1XTY0');
     </script>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        color: #333;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0 20px;
-    }
-    .menu-toggle {
-        display: none;
-    }
 
-    /* Show menu-toggle only on mobile screens */
-    @media (max-width: 768px) {
-        .menu-toggle {
-            display: block;
-            font-size: 18px;
-            padding: 10px;
-            background-color: #ffffff;
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Yohei Cho",
+      "alternateName": "張葉平",
+      "url": "https://yoheic01.github.io/",
+      "image": "https://yoheic01.github.io/profile-pic.jpg",
+      "jobTitle": "Assistant Professor",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Institute of Science Tokyo"
+      },
+      "sameAs": [
+        "https://scholar.google.com/citations?hl=ja&user=jT-CXx8AAAAJ",
+        "https://orcid.org/0000-0002-6516-2567",
+        "https://www.linkedin.com/in/yohei-cho-b8b5b411a/",
+        "https://twitter.com/YoheiCho"
+      ]
+    }
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
             color: #333;
-            border: none;
-            width: 100%;
-            text-align: left;
-            cursor: pointer;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0 20px;
+        }
+        .menu-toggle {
+            display: none;
         }
 
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                font-size: 18px;
+                padding: 10px;
+                background-color: #ffffff;
+                color: #333;
+                border: none;
+                width: 100%;
+                text-align: left;
+                cursor: pointer;
+            }
+
+            .nav ul {
+                display: none;
+                flex-direction: column;
+                padding: 0;
+                margin: 0;
+                background-color: #ffffff;
+                width: 100%;
+            }
+
+            .nav ul li {
+                margin: 0;
+                padding: 10px;
+                text-align: center;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .nav ul {
+                display: flex !important;
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #444;
+            text-align: center;
+        }
+        h2 {
+            color: #444;
+            scroll-margin-top: 80px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        .profile-pic {
+            display: block;
+            margin: 0 auto;
+            width: 150px;
+            border-radius: 50%;
+            background: #ccc;
+            object-fit: cover;
+        }
+        a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .nav {
+            position: sticky;
+            top: 0;
+            background: #ffffff;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            z-index: 1000;
+        }
         .nav ul {
-            display: none; /* 初期状態ではナビゲーションを非表示 */
-            flex-direction: column;
+            list-style: none;
             padding: 0;
             margin: 0;
-            background-color: #ffffff;
-            width: 100%;
+            justify-content: space-around;
+        }
+        .nav ul li a {
+            font-weight: bold;
+            font-size: 14px;
+            color: #444;
+            padding: 6px 12px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        .nav ul li a:hover {
+            color: #fff;
+            background-color: #333;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .intro {
+            max-width: 800px;
+            margin: 20px auto 30px auto;
+        }
+    </style>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            if (window.innerWidth <= 768) {
+                navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
+            }
         }
 
-        .nav ul li {
-            margin: 0;
-            padding: 10px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-        }
-    }
-
-    @media (min-width: 769px) {
-        .nav ul {
-            display: flex !important; /* デスクトップでは常に表示 */
-        }
-    }
-
-    .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-    h1 {
-        color: #444;
-        text-align: center;
-    }
-    h2 {
-        color: #444;
-        scroll-margin-top: 1500px;
-    }
-    section {
-        margin-bottom: 30px;
-    }
-    .profile-pic {
-        display: block;
-        margin: 0 auto;
-        width: 150px;
-        border-radius: 50%;
-        background: #ccc;
-        object-fit: cover;
-    }
-    a {
-        color: #0073e6;
-        text-decoration: none;
-    }
-    a:hover {
-        text-decoration: underline;
-    }
-    .nav {
-        position: sticky;
-        top: 0;
-        background: #ffffff;
-        padding: 10px 0;
-        border-bottom: 1px solid #ddd;
-        z-index: 1000;
-    }
-    .nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        justify-content: space-around;
-    }
-    .nav ul li a {
-        font-weight: bold;
-        font-size: 14px;
-        color: #444;
-        padding: 6px 12px;
-        border-radius: 15px;
-        transition: all 0.3s ease;
-        white-space: nowrap;
-    }
-    .nav ul li a:hover {
-        color: #fff;
-        background-color: #333;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    }
-</style>
-
-<script>
-    function toggleMenu() {
-        const navLinks = document.getElementById('nav-links');
-        if (window.innerWidth <= 768) {
-            navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
-        }
-    }
-
-    window.addEventListener('resize', () => {
-        const navLinks = document.getElementById('nav-links');
-        if (window.innerWidth > 768) {
-            navLinks.style.display = 'flex'; // デスクトップでは常に表示
-        } else {
-            navLinks.style.display = 'none'; // モバイルでは非表示に戻す
-        }
-    });
-</script>
+        window.addEventListener('resize', () => {
+            const navLinks = document.getElementById('nav-links');
+            if (window.innerWidth > 768) {
+                navLinks.style.display = 'flex';
+            } else {
+                navLinks.style.display = 'none';
+            }
+        });
+    </script>
+</head>
 
 <body>
     <div class="nav">
@@ -155,12 +200,22 @@
         </ul>
     </div>
 
+    <div class="container">
+        <h1>Yohei Cho 張葉平</h1>
+        <img src="profile-pic.jpg" alt="Portrait of Yohei Cho" class="profile-pic">
 
-        <!-- Header with Profile Picture and Name -->
-        <h1>Yohei Cho 張　葉平</h1>
-        <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+        <section class="intro" aria-label="Introduction">
+            <p>
+                Yohei Cho is an Assistant Professor at the Institute of Science Tokyo. His research focuses on photocatalysis,
+                photoelectrochemistry, high-throughput experimentation, oxide photocatalysts, kinetic analysis, and data-driven
+                exploration of functional materials.
+            </p>
+            <p>
+                葉平は東京科学大学の助教であり、光触媒、光電気化学、ハイスループット実験、酸化物光触媒、
+                反応速度解析、機能性材料のデータ駆動探索に取り組んでいます。
+            </p>
+        </section>
 
-        <!-- Background -->
         <section id="background">
             <h2>Background</h2>
             <div class="dual-language-list">
@@ -168,11 +223,11 @@
                     <li>
                         <div class="eng">2025 – Present - Assistant Professor, Institute of Science Tokyo</div>
                         <div class="jp_bg">- 助教、東京科学大学</div>
-                    </li>                    
+                    </li>
                     <li>
                         <div class="eng">2025 - 2025 - Research Assistant Professor (JSPS-PD), Japan Advanced Institute of Science and Technology</div>
                         <div class="jp_bg">- 特任助教（日本学術振興会特別研究員-PD）、北陸先端科学技術大学院大学</div>
-                    </li>                    
+                    </li>
                     <li>
                         <div class="eng">2024 – 2025 - JSPS Postdoctoral Fellow (PD), Japan Advanced Institute of Science and Technology</div>
                         <div class="jp_bg">- 日本学術振興会特別研究員PD 北陸先端科学技術大学院大学</div>
@@ -200,17 +255,15 @@
             </div>
         </section>
 
-        <!-- Research Areas -->
         <section id="research">
             <h2>Research Areas</h2>
-            <p>Photocatalysis, Photoelectrochemistry, High-throughput Exploration</p>
-            <p>光触媒、光電気化学、ハイスループット探索</p>
+            <p>Photocatalysis, Photoelectrochemistry, High-throughput Experimentation, Oxide Photocatalysts, Kinetic Analysis, Materials Discovery</p>
+            <p>光触媒、光電気化学、ハイスループット実験、酸化物光触媒、速度論解析、材料探索</p>
         </section>
-        
-        <!-- Publications (Google Scholar style) -->
+
         <section id="publications">
-          <h2>Publications</h2>
-          <ol reversed>
+            <h2>Publications</h2>
+            <ol reversed>
             <li><b><u>Yohei Cho</u></b>, Kyo Yanagiyama, Emi Sawade, Sunao Nakanowatari, Toru Wada, and Toshiaki Taniike (2026). "High-Throughput Experimentation on Oxide Photocatalyst: From Large-Scale Screening to Kinetic Insights". <i>ChemRxiv</i>. <a href="https://doi.org/10.26434/chemrxiv.15000260/v2">https://doi.org/10.26434/chemrxiv.15000260/v2</a> (Preprint)</li>
             <li>Sho Uchida, Yuta Sekine, <b><u>Yohei Cho</u></b>, Akira Yamaguchi, Toyokazu Tanabe, Kenji Yamaguchi<sup>*</sup>, and Masahiro Miyauchi<sup>*</sup> (2026). "Computational and Experimental Realization of Metal-Ion-Doped Orthorhombic Sn3O4 for Visible-Light-Active Photocatalysis". <i>Journal of the American Chemical Society</i>, <b>148</b> (6), 6036–6044. <a href="https://doi.org/10.1021/jacs.5c15962">https://doi.org/10.1021/jacs.5c15962</a></li>
             <li>Kyo Yanagiyama, <b><u>Yohei Cho</u></b>, Krishnamoorthy Sathiyan, Daisuke Ito, Hiroki Takahashi, and Toshiaki Taniike<sup>*</sup> (2026). "Discovering descriptors linking catalyst film uniformity to oxygen reduction reaction performance". <i>Science and Technology of Advanced Materials: Methods</i>, <b>6</b> (1). <a href="https://doi.org/10.1080/27660400.2026.2613940">https://doi.org/10.1080/27660400.2026.2613940</a></li>
@@ -236,10 +289,9 @@
             <li>Shusaku Shoji, Xiaobo Peng, Akira Yamaguchi, Ryo Watanabe, Choji Fukuhara, <b><u>Yohei Cho</u></b>, Tomokazu Yamamoto, Syo Matsumura, Min-Wen Yu, Satoshi Ishii, Takeshi Fujita<sup>*</sup>, Hideki Abe<sup>*</sup>, and Masahiro Miyauchi<sup>*</sup> (2020). "Photocatalytic uphill conversion of natural gas beyond the limitation of thermal reaction systems". <i>Nature Catalysis</i>, <b>3</b>, 148–153. <a href="https://doi.org/10.1038/s41929-019-0419-z">https://doi.org/10.1038/s41929-019-0419-z</a></li>
             <li>Yongzheng Zhang, <b><u>Yohei Cho</u></b>, Akira Yamaguchi, Xiaobo Peng, Masahiro Miyauchi, Hideki Abe, and Takeshi Fujita<sup>*</sup> (2019). "CO2 oxidative coupling of methane using an earth-abundant CaO-based catalyst". <i>Scientific Reports</i>, <b>9</b>, Article 15454. <a href="https://doi.org/10.1038/s41598-019-51817-2">https://doi.org/10.1038/s41598-019-51817-2</a></li>
             <li>Takeshi Fujita, Xiaobo Peng, Akira Yamaguchi, <b><u>Yohei Cho</u></b>, Yongzheng Zhang, Kimitaka Higuchi, Yuta Yamamoto, Tomoharu Tokunaga, Shigeo Arai, Masahiro Miyauchi, and Hideki Abe<sup>*</sup> (2018). "Nanoporous nickel composite catalyst for the dry reforming of methane". <i>ACS Omega</i>, <b>3</b>, 16651–16657. <a href="https://doi.org/10.1021/acsomega.8b02023">https://doi.org/10.1021/acsomega.8b02023</a></li>
-          </ol>
+            </ol>
         </section>
 
-        <!-- Awards -->
         <section id="awards">
             <h2>Awards</h2>
             <div class="dual-language-list">
@@ -269,7 +321,6 @@
             </div>
         </section>
 
-        <!-- Fellowships -->
         <section id="fellowships">
             <h2>Fellowships</h2>
             <div class="dual-language-list">
@@ -292,9 +343,9 @@
                     </li>
                 </ul>
             </div>
+
         </section>
-        
-        <!-- Invited Talks -->
+
         <section id="talks">
             <h2>Invited Talks</h2>
             <div class="dual-language-list">
@@ -310,42 +361,37 @@
                     </li>
                     <!-- Additional talks as necessary -->
                 </ul>
-            </div>
+            </div>            
         </section>
 
-        <!-- Contact & Social Links -->
         <section id="contact">
             <h2>Contact & Social Links</h2>
             <ul>
                 <li>Email: <a href="mailto:cho@mct.isct.ac.jp">cho@mct.isct.ac.jp</a></li>
-                <li>Google Scholar: <a href="https://scholar.google.com/citations?hl=ja&user=jT-CXx8AAAAJ" target="_blank">Google Scholar Profile</a></li>
-                <li>ORCID: <a href="https://orcid.org/0000-0002-6516-2567" target="_blank">0000-0002-6516-2567</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/yohei-cho-b8b5b411a/" target="_blank">LinkedIn Profile</a></li>
-                <li>X (Twitter): <a href="https://twitter.com/YoheiCho" target="_blank">@YoheiCho</a></li>
+                <li>Google Scholar: <a href="https://scholar.google.com/citations?hl=ja&user=jT-CXx8AAAAJ">Google Scholar Profile</a></li>
+                <li>ORCID: <a href="https://orcid.org/0000-0002-6516-2567">0000-0002-6516-2567</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/yohei-cho-b8b5b411a/">LinkedIn Profile</a></li>
+                <li>X (Twitter): <a href="https://twitter.com/YoheiCho">@YoheiCho</a></li>
             </ul>
         </section>
     </div>
+
     <script>
-        function toggleMenu() {
-            const navLinks = document.getElementById('nav-links');
-            navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
-        }
-    
-        // ナビゲーションリンクをクリックするとメニューが閉じるように設定
         document.querySelectorAll('#nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 const navLinks = document.getElementById('nav-links');
-                navLinks.style.display = 'none';
+                if (window.innerWidth <= 768) {
+                    navLinks.style.display = 'none';
+                }
             });
         });
+
+        document.querySelectorAll('a[href^="http"]').forEach(link => {
+            if (link.hostname !== location.hostname) {
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+            }
+        });
     </script>
-<script>
-document.querySelectorAll('a[href^="http"]').forEach(link => {
-    if (link.hostname !== location.hostname) {
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-    }
-});
-</script>
 </body>
 </html>
