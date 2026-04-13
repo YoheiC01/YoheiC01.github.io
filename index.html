@@ -54,332 +54,635 @@
     }
     </script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            line-height: 1.6;
+        *, *::before, *::after {
+            box-sizing: border-box;
             margin: 0;
-            padding: 0 20px;
-        }
-        .menu-toggle {
-            display: none;
+            padding: 0;
         }
 
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-                font-size: 18px;
-                padding: 10px;
-                background-color: #ffffff;
-                color: #333;
-                border: none;
-                width: 100%;
-                text-align: left;
-                cursor: pointer;
-            }
-
-            .nav ul {
-                display: none;
-                flex-direction: column;
-                padding: 0;
-                margin: 0;
-                background-color: #ffffff;
-                width: 100%;
-            }
-
-            .nav ul li {
-                margin: 0;
-                padding: 10px;
-                text-align: center;
-                border-bottom: 1px solid #ddd;
-            }
+        :root {
+            --bg: #0d1117;
+            --bg-nav: rgba(13, 17, 23, 0.95);
+            --text-primary: #f0f2f5;
+            --text-secondary: #b0b8c4;
+            --text-muted: #6b7280;
+            --accent: #5eead4;
+            --border: rgba(255, 255, 255, 0.08);
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
-        @media (min-width: 769px) {
-            .nav ul {
-                display: flex !important;
-            }
+        html {
+            scroll-behavior: smooth;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg);
+            color: var(--text-primary);
+            font-size: 15px;
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-        h1 {
-            color: #444;
-            text-align: center;
-        }
-        h2 {
-            color: #444;
-            scroll-margin-top: 80px;
-        }
-        section {
-            margin-bottom: 30px;
-        }
-        .profile-pic {
-            display: block;
-            margin: 0 auto;
-            width: 150px;
-            border-radius: 50%;
-            background: #ccc;
-            object-fit: cover;
-        }
-        a {
-            color: #0073e6;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+
+        /* Navigation */
         .nav {
             position: sticky;
             top: 0;
-            background: #ffffff;
-            padding: 10px 0;
-            border-bottom: 1px solid #ddd;
-            z-index: 1000;
+            z-index: 100;
+            background: var(--bg-nav);
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
         }
-        .nav ul {
+
+        .nav.scrolled {
+            border-bottom-color: var(--border);
+        }
+
+        .nav-inner {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 48px;
+        }
+
+        .nav-links {
+            display: flex;
             list-style: none;
-            padding: 0;
-            margin: 0;
-            justify-content: space-around;
+            gap: 24px;
         }
-        .nav ul li a {
-            font-weight: bold;
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
             font-size: 14px;
-            color: #444;
-            padding: 6px 12px;
-            border-radius: 15px;
-            transition: all 0.3s ease;
-            white-space: nowrap;
+            cursor: pointer;
+            font-family: var(--font-body);
+            padding: 8px 0;
         }
-        .nav ul li a:hover {
-            color: #fff;
-            background-color: #333;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+        /* Container */
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
-        .intro {
-            max-width: 800px;
-            margin: 20px auto 30px auto;
+
+        /* Header */
+        .header {
+            padding: 64px 0 48px;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .profile-pic {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .header-text h1 {
+            font-size: 42px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+        }
+
+        .header-text h1 .name-jp {
+            font-size: 18px;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin-left: 12px;
+        }
+
+        .header-text .title {
+            font-size: 15px;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin-top: 8px;
+            line-height: 1.5;
+        }
+
+        .header-links {
+            margin-top: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 16px;
+            font-size: 13px;
+        }
+
+        .header-links a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .header-links a:hover {
+            opacity: 0.75;
+        }
+
+        .header-links .sep {
+            color: var(--text-muted);
+        }
+
+        /* Sections */
+        section {
+            padding: 40px 0;
+        }
+
+        section + section {
+            border-top: 1px solid var(--border);
+        }
+
+        h2 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--accent);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            scroll-margin-top: 64px;
+        }
+
+        /* Background / CV */
+        .cv-entry {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 16px;
+            font-size: 14px;
+            line-height: 1.65;
+        }
+
+        .cv-date {
+            flex-shrink: 0;
+            width: 100px;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+            font-size: 13px;
+        }
+
+        .cv-desc {
+            color: var(--text-primary);
+            font-weight: 400;
+        }
+
+        .cv-desc .jp {
+            color: var(--text-muted);
+            font-size: 13px;
+            display: block;
+            margin-top: 2px;
+        }
+
+        /* Research areas */
+        .research-text {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .research-text .jp {
+            color: var(--text-muted);
+            font-size: 14px;
+            display: block;
+            margin-top: 4px;
+        }
+
+        /* Publications */
+        .pub-list {
+            list-style: none;
+            counter-reset: pub-counter 26;
+        }
+
+        .pub-item {
+            counter-increment: pub-counter -1;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        .pub-item:first-child {
+            padding-top: 0;
+        }
+
+        .pub-item:last-child {
+            border-bottom: none;
+        }
+
+        .pub-item::before {
+            content: "[" counter(pub-counter) "] ";
+            color: var(--text-muted);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .pub-item .author-highlight {
+            color: var(--accent);
+        }
+
+        .pub-item .pub-title {
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        .pub-item em {
+            font-style: italic;
+        }
+
+        .pub-item .pub-note {
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        .pub-item a {
+            color: var(--accent);
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .pub-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Awards, Fellowships, Talks */
+        .entry-list {
+            list-style: none;
+        }
+
+        .entry-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+            line-height: 1.65;
+            color: var(--text-primary);
+        }
+
+        .entry-list li:first-child {
+            padding-top: 0;
+        }
+
+        .entry-list li:last-child {
+            border-bottom: none;
+        }
+
+        .entry-list .year {
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 13px;
+            margin-right: 8px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .entry-list .jp {
+            color: var(--text-muted);
+            font-size: 13px;
+            display: block;
+            margin-top: 2px;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            margin-top: 24px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--accent);
+        }
+
+        /* Fade-in on scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile */
+        @media (max-width: 640px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 40px 0 32px;
+                gap: 20px;
+            }
+
+            .profile-pic {
+                width: 100px;
+                height: 100px;
+            }
+
+            .header-text h1 {
+                font-size: 24px;
+            }
+
+            .header-text h1 .name-jp {
+                display: block;
+                margin-left: 0;
+                margin-top: 4px;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                position: absolute;
+                top: 48px;
+                left: 0;
+                right: 0;
+                background: var(--bg);
+                border-bottom: 1px solid var(--border);
+                padding: 8px 24px;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links li {
+                padding: 10px 0;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links li:last-child {
+                border-bottom: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .cv-entry {
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .cv-date {
+                width: auto;
+            }
+
+            h2 {
+                font-size: 14px;
+            }
         }
     </style>
-
-    <script>
-        function toggleMenu() {
-            const navLinks = document.getElementById('nav-links');
-            if (window.innerWidth <= 768) {
-                navLinks.style.display = navLinks.style.display === 'block' ? 'none' : 'block';
-            }
-        }
-
-        window.addEventListener('resize', () => {
-            const navLinks = document.getElementById('nav-links');
-            if (window.innerWidth > 768) {
-                navLinks.style.display = 'flex';
-            } else {
-                navLinks.style.display = 'none';
-            }
-        });
-    </script>
 </head>
 
 <body>
-    <div class="nav">
-        <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
-        <ul id="nav-links">
-            <li><a href="#background">Background</a></li>
-            <li><a href="#research">Research Areas</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#awards">Awards</a></li>
-            <li><a href="#fellowships">Fellowships</a></li>
-            <li><a href="#talks">Invited Talks</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
+
+    <nav class="nav" id="navbar">
+        <div class="nav-inner">
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">Menu</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#background">Background</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#fellowships">Fellowships</a></li>
+                <li><a href="#talks">Talks</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <div class="container">
-        <h1>Yohei Cho 張葉平</h1>
-        <img src="profile-pic.jpg" alt="Portrait of Yohei Cho" class="profile-pic">
 
-        <section id="background">
+        <header class="header">
+            <img src="profile-pic.jpg" alt="Portrait of Yohei Cho" class="profile-pic">
+            <div class="header-text">
+                <h1>Yohei Cho <span class="name-jp">張葉平</span></h1>
+                <div class="title">Assistant Professor, Institute of Science Tokyo<br>Photocatalysis / Photoelectrochemistry / High-Throughput Experimentation</div>
+            </div>
+        </header>
+
+        <section id="background" class="fade-in">
             <h2>Background</h2>
-            <div class="dual-language-list">
-                <ul>
-                    <li>
-                        <div class="eng">2025 – Present - Assistant Professor, Institute of Science Tokyo</div>
-                        <div class="jp_bg">- 助教、東京科学大学</div>
-                    </li>
-                    <li>
-                        <div class="eng">2025 - 2025 - Research Assistant Professor (JSPS-PD), Japan Advanced Institute of Science and Technology</div>
-                        <div class="jp_bg">- 特任助教（日本学術振興会特別研究員-PD）、北陸先端科学技術大学院大学</div>
-                    </li>
-                    <li>
-                        <div class="eng">2024 – 2025 - JSPS Postdoctoral Fellow (PD), Japan Advanced Institute of Science and Technology</div>
-                        <div class="jp_bg">- 日本学術振興会特別研究員PD 北陸先端科学技術大学院大学</div>
-                    </li>
-                    <li>
-                        <div class="eng">2023 – 2024 - JSPS Postdoctoral Fellow (PD), Tokyo Institute of Technology</div>
-                        <div class="jp_bg">- 日本学術振興会特別研究員PD 東京工業大学</div>
-                    </li>
-                    <li>
-                        <div class="eng">2022 – 2022 - Visiting Student, Department of Chemistry, Imperial College London</div>
-                    </li>
-                    <li>
-                        <div class="eng">2021 – 2023 - Ph.D. in Materials Science and Engineering, Tokyo Institute of Technology</div>
-                        <div class="jp_bg">- 東京工業大学物質理工学院材料系 博士課程</div>
-                    </li>
-                    <li>
-                        <div class="eng">2019 – 2021 - M.Sc. in Materials Science and Engineering, Tokyo Institute of Technology</div>
-                        <div class="jp_bg">- 東京工業大学物質理工学院材料系 修士課程</div>
-                    </li>
-                    <li>
-                        <div class="eng">2015 – 2019 - B.Sc. in Inorganic Materials Science, Tokyo Institute of Technology</div>
-                        <div class="jp_bg">- 東京工業大学無機材料工学科 学士課程</div>
-                    </li>
-                </ul>
+            <div class="cv-entry">
+                <span class="cv-date">2025 &ndash; Present</span>
+                <div class="cv-desc">Assistant Professor, Institute of Science Tokyo<span class="jp">助教、東京科学大学</span></div>
+            </div>
+            <div class="cv-entry">
+                <span class="cv-date">2025</span>
+                <div class="cv-desc">Research Assistant Professor (JSPS-PD), Japan Advanced Institute of Science and Technology<span class="jp">特任助教（日本学術振興会特別研究員-PD）、北陸先端科学技術大学院大学</span></div>
+            </div>
+            <div class="cv-entry">
+                <span class="cv-date">2024 &ndash; 2025</span>
+                <div class="cv-desc">JSPS Postdoctoral Fellow (PD), Japan Advanced Institute of Science and Technology<span class="jp">日本学術振興会特別研究員PD 北陸先端科学技術大学院大学</span></div>
+            </div>
+            <div class="cv-entry">
+                <span class="cv-date">2023 &ndash; 2024</span>
+                <div class="cv-desc">JSPS Postdoctoral Fellow (PD), Tokyo Institute of Technology<span class="jp">日本学術振興会特別研究員PD 東京工業大学</span></div>
+            </div>
+            <div class="cv-entry">
+                <span class="cv-date">2022</span>
+                <div class="cv-desc">Visiting Student, Department of Chemistry, Imperial College London</div>
+            </div>
+            <div class="cv-entry">
+                <span class="cv-date">2021 &ndash; 2023</span>
+                <div class="cv-desc">Ph.D. in Materials Science and Engineering, Tokyo Institute of Technology<span class="jp">東京工業大学物質理工学院材料系 博士課程</span></div>
+            </div>
+            <div class="cv-entry">
+                <span class="cv-date">2019 &ndash; 2021</span>
+                <div class="cv-desc">M.Sc. in Materials Science and Engineering, Tokyo Institute of Technology<span class="jp">東京工業大学物質理工学院材料系 修士課程</span></div>
+            </div>
+            <div class="cv-entry">
+                <span class="cv-date">2015 &ndash; 2019</span>
+                <div class="cv-desc">B.Sc. in Inorganic Materials Science, Tokyo Institute of Technology<span class="jp">東京工業大学無機材料工学科 学士課程</span></div>
             </div>
         </section>
 
-        <section id="research">
+        <section id="research" class="fade-in">
             <h2>Research Areas</h2>
-            <p>Photocatalysis, Photoelectrochemistry, High-throughput Experimentation, Oxide Photocatalysts, Kinetic Analysis, Materials Discovery</p>
-            <p>光触媒、光電気化学、ハイスループット実験、酸化物光触媒、速度論解析、材料探索</p>
+            <p class="research-text">Photocatalysis, Photoelectrochemistry, High-throughput Experimentation, Oxide Photocatalysts, Kinetic Analysis, Materials Discovery<span class="jp">光触媒、光電気化学、ハイスループット実験、酸化物光触媒、速度論解析、材料探索</span></p>
         </section>
 
-        <section id="publications">
+        <section id="publications" class="fade-in">
             <h2>Publications</h2>
-            <ol reversed>
-            <li><b><u>Yohei Cho</u></b>, Kyo Yanagiyama, Emi Sawade, Sunao Nakanowatari, Toru Wada, and Toshiaki Taniike (2026). "High-Throughput Experimentation on Oxide Photocatalyst: From Large-Scale Screening to Kinetic Insights". <i>ChemRxiv</i>. <a href="https://doi.org/10.26434/chemrxiv.15000260/v2">https://doi.org/10.26434/chemrxiv.15000260/v2</a> (Preprint)</li>
-            <li>Sho Uchida, Yuta Sekine, <b><u>Yohei Cho</u></b>, Akira Yamaguchi, Toyokazu Tanabe, Kenji Yamaguchi<sup>*</sup>, and Masahiro Miyauchi<sup>*</sup> (2026). "Computational and Experimental Realization of Metal-Ion-Doped Orthorhombic Sn3O4 for Visible-Light-Active Photocatalysis". <i>Journal of the American Chemical Society</i>, <b>148</b> (6), 6036–6044. <a href="https://doi.org/10.1021/jacs.5c15962">https://doi.org/10.1021/jacs.5c15962</a></li>
-            <li>Kyo Yanagiyama, <b><u>Yohei Cho</u></b>, Krishnamoorthy Sathiyan, Daisuke Ito, Hiroki Takahashi, and Toshiaki Taniike<sup>*</sup> (2026). "Discovering descriptors linking catalyst film uniformity to oxygen reduction reaction performance". <i>Science and Technology of Advanced Materials: Methods</i>, <b>6</b> (1). <a href="https://doi.org/10.1080/27660400.2026.2613940">https://doi.org/10.1080/27660400.2026.2613940</a></li>
-            <li><b><u>Yohei Cho</u></b><sup>*</sup>, Osamu Tagami, Kyo Yanagiyama, Kazuma Gotoh, Emi Sawade, Toru Wada, and Toshiaki Taniike<sup>*</sup> (2026). "A Simple Microplate Assay for Accelerated Photocatalytic Activity Evaluation". <i>ACS Environmental Au</i>, <b>6</b> (1), 134–143. <a href="https://doi.org/10.1021/acsenvironau.5c00200">https://doi.org/10.1021/acsenvironau.5c00200</a>. <b>Selected as Front Cover</b></li>
-            <li>Hiroaki Kaneko, Shusaku Shoji, <b><u>Yohei Cho</u></b>, Tomotaka Sugimura, Ayako Hashimoto, Hideki Abe, Akira Yamaguchi, and Masahiro Miyauchi<sup>*</sup> (2025). "Overcoming thermodynamic incompatibilities with photons: multi-carbon hydrocarbons from methane and carbon dioxide via a hybrid photocatalytic dry reforming/Fischer–Tropsch process". <i>Green Chem.</i>, <b>27</b>, 15056–15060. <a href="https://doi.org/10.1039/D5GC04326C">https://doi.org/10.1039/D5GC04326C</a></li>
-            <li>Poulami Mukherjee<sup>*</sup>, <b><u>Yohei Cho</u></b>, Panitha Phulkerd, and Toshiaki Taniike<sup>*</sup> (2025). "Accelerated Perovskite Discovery: Screening New Catalysts for Photocatalytic Methylene Blue Degradation". <i>Materials Advances</i>, <b>6</b>, 4680–4686. <a href="https://doi.org/10.1039/d5ma00345h">https://doi.org/10.1039/d5ma00345h</a></li>
-            <li><b><u>Yohei Cho</u></b><sup>*</sup>, Kyo Yanagiyama, Poulami Mukherjee, Panitha Phulkerd, Krishnamoorthy Sathiyan, Emi Sawade, Toru Wada, and Toshiaki Taniike<sup>*</sup> (2025). "Identifying Rate-Limiting Steps in Photocatalysis: A Temperature-and Light Intensity-Dependent Diagnostic of Charge Supply vs. Charge Transfer". <i>Journal of Materials Chemistry A</i>, <b>13</b>, 16204–16211. <a href="https://doi.org/10.1039/D5TA00415B">https://doi.org/10.1039/D5TA00415B</a></li>
-            <li><b><u>Yohei Cho</u></b>, Mengya Yang, Junyi Cui, Yue Yang, Surya Pratap Singh, Salvador Eslava, Daniele Benetti, James R. Durrant, Akira Yamaguchi, Masahiro Miyauchi, and Fumiaki Amano<sup>*</sup> (2025). "Analysis of TiO2 Photoanode Process Using Intensity Modulated Photocurrent Spectroscopy and Distribution of Relaxation Times". <i>Journal of the American Chemical Society</i>, <b>147</b>, 7703–7710. <a href="https://doi.org/10.1021/jacs.4c17345">https://doi.org/10.1021/jacs.4c17345</a></li>
-            <li>Aya Fujiwara, Sunao Nakanowatari, <b><u>Yohei Cho</u></b>, and Toshiaki Taniike<sup>*</sup> (2025). "Acquiring and transferring comprehensive catalyst knowledge through integrated high-throughput experimentation and automatic feature engineering". <i>Science and Technology of Advanced Materials</i>, <b>26</b> (1), Article 2454219. <a href="https://doi.org/10.1080/14686996.2025.2454219">https://doi.org/10.1080/14686996.2025.2454219</a></li>
-            <li><b><u>Yohei Cho</u></b>, Tianhao He, Benjamin Moss, Daniele Benetti, Caiwu Liang, Lei Tian, Lucy Jessica F Hart, Anna A Wilson, Yu Taniguchi, Junyi Cui, Mengya Yang, Salvador Eslava, Akira Yamaguchi, Masahiro Miyauchi, and James R. Durrant<sup>*</sup> (2024). "Analyzing the Temperature Dependence of Titania Photocatalysis: Kinetic Competition between Water Oxidation Catalysis and Back Electron–Hole Recombination". <i>ACS Catalysis</i>, <b>14</b>, 16543–16550. <a href="https://doi.org/10.1021/acscatal.4c03685">https://doi.org/10.1021/acscatal.4c03685</a></li>
-            <li>Hiroaki Kaneko, <b><u>Yohei Cho</u></b>, Tomotaka Sugimura, Ayako Hashimoto, Akira Yamaguchi, and Masahiro Miyauchi<sup>*</sup> (2024). "Sustaining syngas production at a near-unity H2/CO ratio in the photo-induced dry reforming of methane independent of the reactant gas composition". <i>Chemical Communications</i>, <b>60</b>, 10406–10409. <a href="https://doi.org/10.1039/D4CC03088E">https://doi.org/10.1039/D4CC03088E</a></li>
-            <li>Yue Yang, Masayuki Toyoda, Akira Yamaguchi, <b><u>Yohei Cho</u></b>, An Niza El Aisnada, Hideki Abe, Shigenori Ueda, Sayuri Okunaka, Susumu Saito, Min Liu, Hiromasa Tokudome, and Masahiro Miyauchi<sup>*</sup> (2023). "Bandgap widening through doping for improving the photocatalytic oxidation ability of narrow-bandgap semiconductors". <i>Physical Chemistry Chemical Physics</i>, <b>25</b>, 255–261. <a href="https://doi.org/10.1039/D2CP02994D">https://doi.org/10.1039/D2CP02994D</a></li>
-            <li>Natsumi Noguchi, Shin-ichi Ito, Miwa Hikichi, <b><u>Yohei Cho</u></b>, Kazuho Goto, Atsushi Kubo, Iwao Matsuda, Takeshi Fujita, Masahiro Miyauchi, and Takahiro Kondo<sup>*</sup> (2022). "Highly dispersed Ni nanoclusters spontaneously formed on hydrogen boride sheets". <i>Molecules</i>, <b>27</b>, Article 8261. <a href="https://doi.org/10.3390/molecules27238261">https://doi.org/10.3390/molecules27238261</a></li>
-            <li><b><u>Yohei Cho</u></b>, Akira Yamaguchi, Aaron Syahronitua Sinaga, Yue Yang, and Masahiro Miyauchi<sup>*</sup> (2022). "Photocatalysis under thermally shifted bandgap". <i>Applied Catalysis A: General</i>, <b>643</b>, Article 118772. <a href="https://doi.org/10.1016/j.apcata.2022.118772">https://doi.org/10.1016/j.apcata.2022.118772</a></li>
-            <li>Shusaku Shoji, Abdillah Sani Bin Mohd Najib, Min-Wen Yu, Tomokazu Yamamoto, Sou Yasuhara, Akira Yamaguchi, Xiaobo Peng, Syo Matsumura, Satoshi Ishii, <b><u>Yohei Cho</u></b>, Takeshi Fujita, Shigenori Ueda, Kuo-Ping Chen, Hideki Abe<sup>*</sup>, and Masahiro Miyauchi<sup>*</sup> (2022). "Charge partitioning by intertwined metal-oxide nano-architectural networks for the photocatalytic dry reforming of methane". <i>Chem Catalysis</i>, <b>2</b>, 321–329. <a href="https://doi.org/10.1016/j.checat.2021.11.015">https://doi.org/10.1016/j.checat.2021.11.015</a></li>
-            <li>Masaru Kushida, Akira Yamaguchi, <b><u>Yohei Cho</u></b>, Takeshi Fujita, Hideki Abe, and Masahiro Miyauchi<sup>*</sup> (2021). "Gas-Phase Photoelectrocatalysis Mediated by Oxygen Ions for Uphill Conversion of Greenhouse Gases". <i>ChemPhotoChem</i>, <b>5</b>, 275–281. <a href="https://doi.org/10.1002/cptc.202000228">https://doi.org/10.1002/cptc.202000228</a></li>
-            <li><b><u>Yohei Cho</u></b>, Akira Yamaguchi, and Masahiro Miyauchi<sup>*</sup> (2021). "Photocatalytic methane reforming: recent advances". <i>Catalysts</i>, <b>11</b>, Article 18. <a href="https://doi.org/10.3390/catal11010018">https://doi.org/10.3390/catal11010018</a></li>
-            <li>Abdillah Sani Bin Mohd Najib, Muhammad Iqbal, Mohamed Barakat Zakaria, Shusaku Shoji, <b><u>Yohei Cho</u></b>, Xiaobo Peng, Shigenori Ueda, Ayako Hashimoto, Takeshi Fujita, Masahiro Miyauchi, Yusuke Yamauchi<sup>*</sup>, and Hideki Abe<sup>*</sup> (2020). "Active faceted nanoporous ruthenium for electrocatalytic hydrogen evolution". <i>Journal of Materials Chemistry A</i>, <b>8</b>, 19788–19792. <a href="https://doi.org/10.1039/d0ta04223d">https://doi.org/10.1039/d0ta04223d</a></li>        
-            <li><b><u>Yohei Cho</u></b>, Akira Yamaguchi, Ryo Uehara, Satoru Yasuhara, Takuya Hoshina, and Masahiro Miyauchi<sup>*</sup> (2020). "Temperature dependence on bandgap of semiconductor photocatalysts". <i>The Journal of Chemical Physics</i>, <b>152</b>, Article 234706. <a href="https://doi.org/10.1063/5.0012330">https://doi.org/10.1063/5.0012330</a></li>
-            <li>Kazu Takeda, Akira Yamaguchi, <b><u>Yohei Cho</u></b>, Oruganti Anjaneyulu, Takeshi Fujita, Hideki Abe, and Masahiro Miyauchi<sup>*</sup> (2020). "Metal carbide as a light-harvesting and anticoking catalysis support for dry reforming of methane". <i>Global Challenges</i>, <b>4</b>, Article 1900067. <a href="https://doi.org/10.1002/gch2.201900067">https://doi.org/10.1002/gch2.201900067</a></li>
-            <li>Hikari Nishiguchi, Abdillah Sani Bin Mohd Najib, Xiaobo Peng, <b><u>Yohei Cho</u></b>, Ayako Hashimoto, Shigenori Ueda, Takeshi Fujita, Masahiro Miyauchi, and Hideki Abe<sup>*</sup> (2020). "Intertwined nickel and magnesium oxide rival precious metals for catalytic reforming of greenhouse gases". <i>Advanced Sustainable Systems</i>, <b>4</b>, Article 2000041. <a href="https://doi.org/10.1002/adsu.202000041">https://doi.org/10.1002/adsu.202000041</a></li>
-            <li><b><u>Yohei Cho</u></b>, Shusaku Shoji, Akira Yamaguchi, Takuya Hoshina, Takeshi Fujita, Hideki Abe, and Masahiro Miyauchi<sup>*</sup> (2020). "Visible-light-driven dry reforming of methane using a semiconductor-supported catalyst". <i>Chemical Communications</i>, <b>56</b>, 4611–4614. <a href="https://doi.org/10.1039/d0cc00729c">https://doi.org/10.1039/d0cc00729c</a></li>
-            <li>Shusaku Shoji, Xiaobo Peng, Akira Yamaguchi, Ryo Watanabe, Choji Fukuhara, <b><u>Yohei Cho</u></b>, Tomokazu Yamamoto, Syo Matsumura, Min-Wen Yu, Satoshi Ishii, Takeshi Fujita<sup>*</sup>, Hideki Abe<sup>*</sup>, and Masahiro Miyauchi<sup>*</sup> (2020). "Photocatalytic uphill conversion of natural gas beyond the limitation of thermal reaction systems". <i>Nature Catalysis</i>, <b>3</b>, 148–153. <a href="https://doi.org/10.1038/s41929-019-0419-z">https://doi.org/10.1038/s41929-019-0419-z</a></li>
-            <li>Yongzheng Zhang, <b><u>Yohei Cho</u></b>, Akira Yamaguchi, Xiaobo Peng, Masahiro Miyauchi, Hideki Abe, and Takeshi Fujita<sup>*</sup> (2019). "CO2 oxidative coupling of methane using an earth-abundant CaO-based catalyst". <i>Scientific Reports</i>, <b>9</b>, Article 15454. <a href="https://doi.org/10.1038/s41598-019-51817-2">https://doi.org/10.1038/s41598-019-51817-2</a></li>
-            <li>Takeshi Fujita, Xiaobo Peng, Akira Yamaguchi, <b><u>Yohei Cho</u></b>, Yongzheng Zhang, Kimitaka Higuchi, Yuta Yamamoto, Tomoharu Tokunaga, Shigeo Arai, Masahiro Miyauchi, and Hideki Abe<sup>*</sup> (2018). "Nanoporous nickel composite catalyst for the dry reforming of methane". <i>ACS Omega</i>, <b>3</b>, 16651–16657. <a href="https://doi.org/10.1021/acsomega.8b02023">https://doi.org/10.1021/acsomega.8b02023</a></li>
+            <ol class="pub-list">
+                <li class="pub-item"><span class="author-highlight">Yohei Cho</span>, Kyo Yanagiyama, Emi Sawade, Sunao Nakanowatari, Toru Wada, and Toshiaki Taniike, <span class="pub-title">"High-Throughput Experimentation on Oxide Photocatalyst: From Large-Scale Screening to Kinetic Insights,"</span> <em>ChemRxiv</em> (2026). <a href="https://doi.org/10.26434/chemrxiv.15000260/v2">doi:10.26434/chemrxiv.15000260/v2</a> <span class="pub-note">(Preprint)</span></li>
+
+                <li class="pub-item">Sho Uchida, Yuta Sekine, <span class="author-highlight">Yohei Cho</span>, Akira Yamaguchi, Toyokazu Tanabe, Kenji Yamaguchi*, and Masahiro Miyauchi*, <span class="pub-title">"Computational and Experimental Realization of Metal-Ion-Doped Orthorhombic Sn<sub>3</sub>O<sub>4</sub> for Visible-Light-Active Photocatalysis,"</span> <em>Journal of the American Chemical Society</em>, <strong>148</strong> (6), 6036&ndash;6044 (2026). <a href="https://doi.org/10.1021/jacs.5c15962">doi:10.1021/jacs.5c15962</a></li>
+
+                <li class="pub-item">Kyo Yanagiyama, <span class="author-highlight">Yohei Cho</span>, Krishnamoorthy Sathiyan, Daisuke Ito, Hiroki Takahashi, and Toshiaki Taniike*, <span class="pub-title">"Discovering descriptors linking catalyst film uniformity to oxygen reduction reaction performance,"</span> <em>Science and Technology of Advanced Materials: Methods</em>, <strong>6</strong> (1) (2026). <a href="https://doi.org/10.1080/27660400.2026.2613940">doi:10.1080/27660400.2026.2613940</a></li>
+
+                <li class="pub-item"><span class="author-highlight">Yohei Cho</span>*, Osamu Tagami, Kyo Yanagiyama, Kazuma Gotoh, Emi Sawade, Toru Wada, and Toshiaki Taniike*, <span class="pub-title">"A Simple Microplate Assay for Accelerated Photocatalytic Activity Evaluation,"</span> <em>ACS Environmental Au</em>, <strong>6</strong> (1), 134&ndash;143 (2026). <a href="https://doi.org/10.1021/acsenvironau.5c00200">doi:10.1021/acsenvironau.5c00200</a> <span class="pub-note">(Front Cover)</span></li>
+
+                <li class="pub-item">Hiroaki Kaneko, Shusaku Shoji, <span class="author-highlight">Yohei Cho</span>, Tomotaka Sugimura, Ayako Hashimoto, Hideki Abe, Akira Yamaguchi, and Masahiro Miyauchi*, <span class="pub-title">"Overcoming thermodynamic incompatibilities with photons: multi-carbon hydrocarbons from methane and carbon dioxide via a hybrid photocatalytic dry reforming/Fischer&ndash;Tropsch process,"</span> <em>Green Chem.</em>, <strong>27</strong>, 15056&ndash;15060 (2025). <a href="https://doi.org/10.1039/D5GC04326C">doi:10.1039/D5GC04326C</a></li>
+
+                <li class="pub-item">Poulami Mukherjee*, <span class="author-highlight">Yohei Cho</span>, Panitha Phulkerd, and Toshiaki Taniike*, <span class="pub-title">"Accelerated Perovskite Discovery: Screening New Catalysts for Photocatalytic Methylene Blue Degradation,"</span> <em>Materials Advances</em>, <strong>6</strong>, 4680&ndash;4686 (2025). <a href="https://doi.org/10.1039/d5ma00345h">doi:10.1039/d5ma00345h</a></li>
+
+                <li class="pub-item"><span class="author-highlight">Yohei Cho</span>*, Kyo Yanagiyama, Poulami Mukherjee, Panitha Phulkerd, Krishnamoorthy Sathiyan, Emi Sawade, Toru Wada, and Toshiaki Taniike*, <span class="pub-title">"Identifying Rate-Limiting Steps in Photocatalysis: A Temperature-and Light Intensity-Dependent Diagnostic of Charge Supply vs. Charge Transfer,"</span> <em>Journal of Materials Chemistry A</em>, <strong>13</strong>, 16204&ndash;16211 (2025). <a href="https://doi.org/10.1039/D5TA00415B">doi:10.1039/D5TA00415B</a></li>
+
+                <li class="pub-item"><span class="author-highlight">Yohei Cho</span>, Mengya Yang, Junyi Cui, Yue Yang, Surya Pratap Singh, Salvador Eslava, Daniele Benetti, James R. Durrant, Akira Yamaguchi, Masahiro Miyauchi, and Fumiaki Amano*, <span class="pub-title">"Analysis of TiO<sub>2</sub> Photoanode Process Using Intensity Modulated Photocurrent Spectroscopy and Distribution of Relaxation Times,"</span> <em>Journal of the American Chemical Society</em>, <strong>147</strong>, 7703&ndash;7710 (2025). <a href="https://doi.org/10.1021/jacs.4c17345">doi:10.1021/jacs.4c17345</a></li>
+
+                <li class="pub-item">Aya Fujiwara, Sunao Nakanowatari, <span class="author-highlight">Yohei Cho</span>, and Toshiaki Taniike*, <span class="pub-title">"Acquiring and transferring comprehensive catalyst knowledge through integrated high-throughput experimentation and automatic feature engineering,"</span> <em>Science and Technology of Advanced Materials</em>, <strong>26</strong> (1), Article 2454219 (2025). <a href="https://doi.org/10.1080/14686996.2025.2454219">doi:10.1080/14686996.2025.2454219</a></li>
+
+                <li class="pub-item"><span class="author-highlight">Yohei Cho</span>, Tianhao He, Benjamin Moss, Daniele Benetti, Caiwu Liang, Lei Tian, Lucy Jessica F Hart, Anna A Wilson, Yu Taniguchi, Junyi Cui, Mengya Yang, Salvador Eslava, Akira Yamaguchi, Masahiro Miyauchi, and James R. Durrant*, <span class="pub-title">"Analyzing the Temperature Dependence of Titania Photocatalysis: Kinetic Competition between Water Oxidation Catalysis and Back Electron&ndash;Hole Recombination,"</span> <em>ACS Catalysis</em>, <strong>14</strong>, 16543&ndash;16550 (2024). <a href="https://doi.org/10.1021/acscatal.4c03685">doi:10.1021/acscatal.4c03685</a></li>
+
+                <li class="pub-item">Hiroaki Kaneko, <span class="author-highlight">Yohei Cho</span>, Tomotaka Sugimura, Ayako Hashimoto, Akira Yamaguchi, and Masahiro Miyauchi*, <span class="pub-title">"Sustaining syngas production at a near-unity H<sub>2</sub>/CO ratio in the photo-induced dry reforming of methane independent of the reactant gas composition,"</span> <em>Chemical Communications</em>, <strong>60</strong>, 10406&ndash;10409 (2024). <a href="https://doi.org/10.1039/D4CC03088E">doi:10.1039/D4CC03088E</a></li>
+
+                <li class="pub-item">Yue Yang, Masayuki Toyoda, Akira Yamaguchi, <span class="author-highlight">Yohei Cho</span>, An Niza El Aisnada, Hideki Abe, Shigenori Ueda, Sayuri Okunaka, Susumu Saito, Min Liu, Hiromasa Tokudome, and Masahiro Miyauchi*, <span class="pub-title">"Bandgap widening through doping for improving the photocatalytic oxidation ability of narrow-bandgap semiconductors,"</span> <em>Physical Chemistry Chemical Physics</em>, <strong>25</strong>, 255&ndash;261 (2023). <a href="https://doi.org/10.1039/D2CP02994D">doi:10.1039/D2CP02994D</a></li>
+
+                <li class="pub-item">Natsumi Noguchi, Shin-ichi Ito, Miwa Hikichi, <span class="author-highlight">Yohei Cho</span>, Kazuho Goto, Atsushi Kubo, Iwao Matsuda, Takeshi Fujita, Masahiro Miyauchi, and Takahiro Kondo*, <span class="pub-title">"Highly dispersed Ni nanoclusters spontaneously formed on hydrogen boride sheets,"</span> <em>Molecules</em>, <strong>27</strong>, Article 8261 (2022). <a href="https://doi.org/10.3390/molecules27238261">doi:10.3390/molecules27238261</a></li>
+
+                <li class="pub-item"><span class="author-highlight">Yohei Cho</span>, Akira Yamaguchi, Aaron Syahronitua Sinaga, Yue Yang, and Masahiro Miyauchi*, <span class="pub-title">"Photocatalysis under thermally shifted bandgap,"</span> <em>Applied Catalysis A: General</em>, <strong>643</strong>, Article 118772 (2022). <a href="https://doi.org/10.1016/j.apcata.2022.118772">doi:10.1016/j.apcata.2022.118772</a></li>
+
+                <li class="pub-item">Shusaku Shoji, Abdillah Sani Bin Mohd Najib, Min-Wen Yu, Tomokazu Yamamoto, Sou Yasuhara, Akira Yamaguchi, Xiaobo Peng, Syo Matsumura, Satoshi Ishii, <span class="author-highlight">Yohei Cho</span>, Takeshi Fujita, Shigenori Ueda, Kuo-Ping Chen, Hideki Abe*, and Masahiro Miyauchi*, <span class="pub-title">"Charge partitioning by intertwined metal-oxide nano-architectural networks for the photocatalytic dry reforming of methane,"</span> <em>Chem Catalysis</em>, <strong>2</strong>, 321&ndash;329 (2022). <a href="https://doi.org/10.1016/j.checat.2021.11.015">doi:10.1016/j.checat.2021.11.015</a></li>
+
+                <li class="pub-item">Masaru Kushida, Akira Yamaguchi, <span class="author-highlight">Yohei Cho</span>, Takeshi Fujita, Hideki Abe, and Masahiro Miyauchi*, <span class="pub-title">"Gas-Phase Photoelectrocatalysis Mediated by Oxygen Ions for Uphill Conversion of Greenhouse Gases,"</span> <em>ChemPhotoChem</em>, <strong>5</strong>, 275&ndash;281 (2021). <a href="https://doi.org/10.1002/cptc.202000228">doi:10.1002/cptc.202000228</a></li>
+
+                <li class="pub-item"><span class="author-highlight">Yohei Cho</span>, Akira Yamaguchi, and Masahiro Miyauchi*, <span class="pub-title">"Photocatalytic methane reforming: recent advances,"</span> <em>Catalysts</em>, <strong>11</strong>, Article 18 (2021). <a href="https://doi.org/10.3390/catal11010018">doi:10.3390/catal11010018</a></li>
+
+                <li class="pub-item">Abdillah Sani Bin Mohd Najib, Muhammad Iqbal, Mohamed Barakat Zakaria, Shusaku Shoji, <span class="author-highlight">Yohei Cho</span>, Xiaobo Peng, Shigenori Ueda, Ayako Hashimoto, Takeshi Fujita, Masahiro Miyauchi, Yusuke Yamauchi*, and Hideki Abe*, <span class="pub-title">"Active faceted nanoporous ruthenium for electrocatalytic hydrogen evolution,"</span> <em>Journal of Materials Chemistry A</em>, <strong>8</strong>, 19788&ndash;19792 (2020). <a href="https://doi.org/10.1039/d0ta04223d">doi:10.1039/d0ta04223d</a></li>
+
+                <li class="pub-item"><span class="author-highlight">Yohei Cho</span>, Akira Yamaguchi, Ryo Uehara, Satoru Yasuhara, Takuya Hoshina, and Masahiro Miyauchi*, <span class="pub-title">"Temperature dependence on bandgap of semiconductor photocatalysts,"</span> <em>The Journal of Chemical Physics</em>, <strong>152</strong>, Article 234706 (2020). <a href="https://doi.org/10.1063/5.0012330">doi:10.1063/5.0012330</a></li>
+
+                <li class="pub-item">Kazu Takeda, Akira Yamaguchi, <span class="author-highlight">Yohei Cho</span>, Oruganti Anjaneyulu, Takeshi Fujita, Hideki Abe, and Masahiro Miyauchi*, <span class="pub-title">"Metal carbide as a light-harvesting and anticoking catalysis support for dry reforming of methane,"</span> <em>Global Challenges</em>, <strong>4</strong>, Article 1900067 (2020). <a href="https://doi.org/10.1002/gch2.201900067">doi:10.1002/gch2.201900067</a></li>
+
+                <li class="pub-item">Hikari Nishiguchi, Abdillah Sani Bin Mohd Najib, Xiaobo Peng, <span class="author-highlight">Yohei Cho</span>, Ayako Hashimoto, Shigenori Ueda, Takeshi Fujita, Masahiro Miyauchi, and Hideki Abe*, <span class="pub-title">"Intertwined nickel and magnesium oxide rival precious metals for catalytic reforming of greenhouse gases,"</span> <em>Advanced Sustainable Systems</em>, <strong>4</strong>, Article 2000041 (2020). <a href="https://doi.org/10.1002/adsu.202000041">doi:10.1002/adsu.202000041</a></li>
+
+                <li class="pub-item"><span class="author-highlight">Yohei Cho</span>, Shusaku Shoji, Akira Yamaguchi, Takuya Hoshina, Takeshi Fujita, Hideki Abe, and Masahiro Miyauchi*, <span class="pub-title">"Visible-light-driven dry reforming of methane using a semiconductor-supported catalyst,"</span> <em>Chemical Communications</em>, <strong>56</strong>, 4611&ndash;4614 (2020). <a href="https://doi.org/10.1039/d0cc00729c">doi:10.1039/d0cc00729c</a></li>
+
+                <li class="pub-item">Shusaku Shoji, Xiaobo Peng, Akira Yamaguchi, Ryo Watanabe, Choji Fukuhara, <span class="author-highlight">Yohei Cho</span>, Tomokazu Yamamoto, Syo Matsumura, Min-Wen Yu, Satoshi Ishii, Takeshi Fujita*, Hideki Abe*, and Masahiro Miyauchi*, <span class="pub-title">"Photocatalytic uphill conversion of natural gas beyond the limitation of thermal reaction systems,"</span> <em>Nature Catalysis</em>, <strong>3</strong>, 148&ndash;153 (2020). <a href="https://doi.org/10.1038/s41929-019-0419-z">doi:10.1038/s41929-019-0419-z</a></li>
+
+                <li class="pub-item">Yongzheng Zhang, <span class="author-highlight">Yohei Cho</span>, Akira Yamaguchi, Xiaobo Peng, Masahiro Miyauchi, Hideki Abe, and Takeshi Fujita*, <span class="pub-title">"CO<sub>2</sub> oxidative coupling of methane using an earth-abundant CaO-based catalyst,"</span> <em>Scientific Reports</em>, <strong>9</strong>, Article 15454 (2019). <a href="https://doi.org/10.1038/s41598-019-51817-2">doi:10.1038/s41598-019-51817-2</a></li>
+
+                <li class="pub-item">Takeshi Fujita, Xiaobo Peng, Akira Yamaguchi, <span class="author-highlight">Yohei Cho</span>, Yongzheng Zhang, Kimitaka Higuchi, Yuta Yamamoto, Tomoharu Tokunaga, Shigeo Arai, Masahiro Miyauchi, and Hideki Abe*, <span class="pub-title">"Nanoporous nickel composite catalyst for the dry reforming of methane,"</span> <em>ACS Omega</em>, <strong>3</strong>, 16651&ndash;16657 (2018). <a href="https://doi.org/10.1021/acsomega.8b02023">doi:10.1021/acsomega.8b02023</a></li>
             </ol>
         </section>
 
-        <section id="awards">
+        <section id="awards" class="fade-in">
             <h2>Awards</h2>
-            <div class="dual-language-list">
-                <ul>
-                    <li>
-                        <div class="eng">2024 - Oral Presentation Award, 24th International Conference on Photochemical Conversion and Storage of Solar Energy (IPS-24) / International Conference on Artificial Photosynthesis-2024 (ICARP2024)</div>
-                    </li>
-                    <li>
-                        <div class="eng">2024 - Leave a Nest grant KYOCERA award</div>
-                        <div class="jp">- リバネス助成 京セラ賞</div>
-                    </li>
-                    <li>
-                        <div class="eng">2022 - Tokyo Tech Excellence Award, Tokyo Tech Academy for Convergence of Materials and Informatics (TAC-MI)</div>
-                        <div class="jp">- 東京工業大学物質・情報卓越教育院（TAC-MI）優秀特別賞</div>
-                    </li>
-                    <li>
-                        <div class="eng">2022 - Encouragement Award, 27th Symposium on Recent Developments in Photocatalysis</div>
-                        <div class="jp">- 第27回シンポジウム「光触媒反応の最近の展開」奨励賞</div>
-                    </li>
-                    <li>
-                        <div class="eng">2021 - Excellent Presentation Award at "The 12th Multidisciplinary International Student Workshop"</div>
-                    </li>
-                    <li>
-                        <div class="eng">2020 - Excellent Presentation Award at "The 13th Pacific Rim Conference of Ceramic Societies"</div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="fellowships">
-            <h2>Fellowships</h2>
-            <div class="dual-language-list">
-                <ul>
-                    <li>
-                        <div class="eng">2024 - JSPS Research Fellowship for Young Scientists (PD)</div>
-                        <div class="jp">- 日本学術振興会特別研究員（PD）</div>
-                    </li>
-                    <li>
-                        <div class="eng">2022 - JSPS Overseas Challenge Program for Young Researchers</div>
-                        <div class="jp"> - 日本学術振興会 若手研究者海外挑戦プログラム</div>
-                    </li>
-                    <li>
-                        <div class="eng">2021 - JSPS Research Fellowship for Young Scientists (DC1)</div>
-                        <div class="jp">- 日本学術振興会特別研究員（DC1）</div>
-                    </li>
-                    <li>
-                        <div class="eng">2019 - Tokyo Tech Academy for Convergence of Materials and Informatics Student (TAC-MI)</div>
-                        <div class="jp">- 東京工業大学物質・情報卓越教育院（TAC-MI）登録学生</div>
-                    </li>
-                </ul>
-            </div>
-
-        </section>
-
-        <section id="talks">
-            <h2>Invited Talks</h2>
-            <div class="dual-language-list">
-                <ul>
-                    <li><div class="eng">"High-throughput exploration of photocatalysts independent of literature bias," Invited Talk, Pacifichem 2025, Honolulu, Hawaii, USA, December 15–19, 2025</div></li>
-                    <li><div class="eng">"In-situ Analysis of Photoelectrode Kinetics," Invited Talk, Symposium on Light-Applicable Materials and Processes (LAMP), Beijing, China, October 15–19, 2025</div></li>
-                    <li><div class="eng">"The effect of temperature on titania photocatalyst and photoanode," Invited Talk, ACS Spring 2025 Meeting, San Diego, CA & Virtual, March 23-27, 2025</div></li>
-                    <li><div class="eng">"The use of temperature as a parameter in photocatalysis study," Invited Talk, 9th International Conference on Catalysis and Chemical Engineering, San Francisco, CA, February 24-26, 2025</div></li>
-                    <li><div class="eng">"Estimation of Rate-Limiting Steps in Photocatalysis by Intensity-Modulated Photocurrent Spectroscopy," Invited Talk, 98th Photofunctional Materials Study Group Conference, Online, July 9, 2024</div>
-                        <div class="jp">「強度変調光電流分光法による光触媒律速過程の推定」, 招待講演, 「光触媒研究と開発技術の最新動向と将来展望」光機能材料研究会 第98回講演会, オンライン, 2024年7月9日</div></li>
-
-                                                
-                    </li>
-                    <!-- Additional talks as necessary -->
-                </ul>
-            </div>            
-        </section>
-
-        <section id="contact">
-            <h2>Contact & Social Links</h2>
-            <ul>
-                <li>Email: <a href="mailto:cho@mct.isct.ac.jp">cho@mct.isct.ac.jp</a></li>
-                <li>Google Scholar: <a href="https://scholar.google.com/citations?hl=ja&user=jT-CXx8AAAAJ">Google Scholar Profile</a></li>
-                <li>ORCID: <a href="https://orcid.org/0000-0002-6516-2567">0000-0002-6516-2567</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/yohei-cho-b8b5b411a/">LinkedIn Profile</a></li>
-                <li>X (Twitter): <a href="https://twitter.com/YoheiCho">@YoheiCho</a></li>
+            <ul class="entry-list">
+                <li><span class="year">2024</span> Oral Presentation Award, 24th International Conference on Photochemical Conversion and Storage of Solar Energy (IPS-24) / International Conference on Artificial Photosynthesis-2024 (ICARP2024)</li>
+                <li><span class="year">2024</span> Leave a Nest grant KYOCERA award<span class="jp">リバネス助成 京セラ賞</span></li>
+                <li><span class="year">2022</span> Tokyo Tech Excellence Award, Tokyo Tech Academy for Convergence of Materials and Informatics (TAC-MI)<span class="jp">東京工業大学物質・情報卓越教育院（TAC-MI）優秀特別賞</span></li>
+                <li><span class="year">2022</span> Encouragement Award, 27th Symposium on Recent Developments in Photocatalysis<span class="jp">第27回シンポジウム「光触媒反応の最近の展開」奨励賞</span></li>
+                <li><span class="year">2021</span> Excellent Presentation Award, The 12th Multidisciplinary International Student Workshop</li>
+                <li><span class="year">2020</span> Excellent Presentation Award, The 13th Pacific Rim Conference of Ceramic Societies</li>
             </ul>
         </section>
+
+        <section id="fellowships" class="fade-in">
+            <h2>Fellowships</h2>
+            <ul class="entry-list">
+                <li><span class="year">2024</span> JSPS Research Fellowship for Young Scientists (PD)<span class="jp">日本学術振興会特別研究員（PD）</span></li>
+                <li><span class="year">2022</span> JSPS Overseas Challenge Program for Young Researchers<span class="jp">日本学術振興会 若手研究者海外挑戦プログラム</span></li>
+                <li><span class="year">2021</span> JSPS Research Fellowship for Young Scientists (DC1)<span class="jp">日本学術振興会特別研究員（DC1）</span></li>
+                <li><span class="year">2019</span> Tokyo Tech Academy for Convergence of Materials and Informatics Student (TAC-MI)<span class="jp">東京工業大学物質・情報卓越教育院（TAC-MI）登録学生</span></li>
+            </ul>
+        </section>
+
+        <section id="talks" class="fade-in">
+            <h2>Invited Talks</h2>
+            <ul class="entry-list">
+                <li><span class="year">2025</span> "High-throughput exploration of photocatalysts independent of literature bias," Pacifichem 2025, Honolulu, Hawaii, USA, December 15&ndash;19, 2025</li>
+                <li><span class="year">2025</span> "In-situ Analysis of Photoelectrode Kinetics," Symposium on Light-Applicable Materials and Processes (LAMP), Beijing, China, October 15&ndash;19, 2025</li>
+                <li><span class="year">2025</span> "The effect of temperature on titania photocatalyst and photoanode," ACS Spring 2025 Meeting, San Diego, CA &amp; Virtual, March 23&ndash;27, 2025</li>
+                <li><span class="year">2025</span> "The use of temperature as a parameter in photocatalysis study," 9th International Conference on Catalysis and Chemical Engineering, San Francisco, CA, February 24&ndash;26, 2025</li>
+                <li><span class="year">2024</span> "Estimation of Rate-Limiting Steps in Photocatalysis by Intensity-Modulated Photocurrent Spectroscopy," 98th Photofunctional Materials Study Group Conference, Online, July 9, 2024<span class="jp">「強度変調光電流分光法による光触媒律速過程の推定」, 招待講演, 光機能材料研究会 第98回講演会, オンライン, 2024年7月9日</span></li>
+            </ul>
+        </section>
+
     </div>
 
+    <footer id="contact">
+        <div class="container">
+            <a href="mailto:cho@mct.isct.ac.jp">Email</a> &nbsp;&middot;&nbsp;
+            <a href="https://scholar.google.com/citations?hl=ja&user=jT-CXx8AAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a> &nbsp;&middot;&nbsp;
+            <a href="https://orcid.org/0000-0002-6516-2567" target="_blank" rel="noopener noreferrer">ORCID</a> &nbsp;&middot;&nbsp;
+            <a href="https://www.linkedin.com/in/yohei-cho-b8b5b411a/" target="_blank" rel="noopener noreferrer">LinkedIn</a> &nbsp;&middot;&nbsp;
+            <a href="https://twitter.com/YoheiCho" target="_blank" rel="noopener noreferrer">X</a>
+        </div>
+    </footer>
+
     <script>
-        document.querySelectorAll('#nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                const navLinks = document.getElementById('nav-links');
-                if (window.innerWidth <= 768) {
-                    navLinks.style.display = 'none';
-                }
+        // Sticky nav border on scroll
+        window.addEventListener('scroll', function() {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10);
+        });
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            document.getElementById('nav-links').classList.toggle('open');
+        }
+
+        // Close menu on link click (mobile)
+        document.querySelectorAll('#nav-links a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.getElementById('nav-links').classList.remove('open');
             });
         });
 
-        document.querySelectorAll('a[href^="http"]').forEach(link => {
+        // Reset on resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 640) {
+                document.getElementById('nav-links').classList.remove('open');
+            }
+        });
+
+        // Subtle fade-in on scroll
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.05 });
+
+        document.querySelectorAll('.fade-in').forEach(function(el) {
+            observer.observe(el);
+        });
+
+        // External links open in new tab
+        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
             if (link.hostname !== location.hostname) {
                 link.target = '_blank';
                 link.rel = 'noopener noreferrer';
             }
         });
     </script>
+
 </body>
 </html>
