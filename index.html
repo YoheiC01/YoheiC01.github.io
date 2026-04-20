@@ -292,8 +292,7 @@
         /* Publications */
         .pub-list {
             list-style: none;
-            /* counter-reset は JS で動的に設定するので、ここでは書かないか 0 にしておきます */
-            counter-reset: pub-counter;
+            /* counter-reset: pub-counter 26;  <-- これを消す */
         }
 
         .pub-item {
@@ -706,11 +705,14 @@
         });
 
         // External links open in new tab
-        document.querySelectorAll('a[href^="http"]').forEach(function(link) {
-            if (link.hostname !== location.hostname) {
-                link.target = '_blank';
-                link.rel = 'noopener noreferrer';
-            }
+        // 論文リストの自動ナンバリング（降順）
+        document.addEventListener('DOMContentLoaded', () => {
+            const pubLists = document.querySelectorAll('.pub-list');
+            pubLists.forEach(list => {
+                const items = list.querySelectorAll('.pub-item');
+                // 論文数 + 1 を開始値としてセット
+                list.style.counterReset = `pub-counter ${items.length + 1}`;
+            });
         });
     </script>
 
