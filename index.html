@@ -292,7 +292,8 @@
         /* Publications */
         .pub-list {
             list-style: none;
-            counter-reset: pub-counter 26;
+            /* counter-reset は JS で動的に設定するので、ここでは書かないか 0 にしておきます */
+            counter-reset: pub-counter;
         }
 
         .pub-item {
@@ -652,6 +653,19 @@
             <a href="https://twitter.com/YoheiCho" target="_blank" rel="noopener noreferrer">X</a>
         </div>
     </footer>
+
+    // 論文リストの自動ナンバリング設定
+    function updatePubCounters() {
+        const pubList = document.querySelector('.pub-list');
+        if (pubList) {
+            const items = pubList.querySelectorAll('.pub-item');
+            // 論文の総数 + 1 を counter-reset にセットする
+            pubList.style.counterReset = `pub-counter ${items.length + 1}`;
+        }
+    }
+    
+    // ページ読み込み時に実行
+    updatePubCounters();
 
     <script>
         // Sticky nav border on scroll
