@@ -1,0 +1,17 @@
+title: "Yohei Cho"
+description: "Yohei Cho is an Assistant Professor at Institute of Science Tokyo. His research focuses on photocatalysis, photoelectrochemistry, high-throughput experimentation, and oxide catalyst discovery."
+url: "https://yoheic01.github.io"
+author: "Yohei Cho"
+email: "cho@mct.isct.ac.jp"
+ga_tracking_id: "G-LZNKP1XTY0"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .gitignore

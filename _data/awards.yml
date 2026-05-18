@@ -1,0 +1,27 @@
+# Awards (newest first)
+#
+# Fields:
+#   year:  int
+#   en:    English description
+#   jp:    Japanese description (optional)
+
+- year: 2024
+  en: "Oral Presentation Award, IPS-24 / ICARP2024"
+
+- year: 2024
+  en: "Leave a Nest grant KYOCERA award"
+  jp: "リバネス助成 京セラ賞"
+
+- year: 2022
+  en: "Tokyo Tech Excellence Award (TAC-MI)"
+  jp: "東京工業大学物質・情報卓越教育院（TAC-MI）優秀特別賞"
+
+- year: 2022
+  en: "Encouragement Award, 27th Symposium on Recent Developments in Photocatalysis"
+  jp: "第27回シンポジウム「光触媒反応の最近の展開」奨励賞"
+
+- year: 2021
+  en: "Excellent Presentation Award, The 12th MISW"
+
+- year: 2020
+  en: "Excellent Presentation Award, The 13th PACRIM"

@@ -1,0 +1,22 @@
+# Fellowships (newest first)
+#
+# Fields:
+#   year:  int
+#   en:    English description
+#   jp:    Japanese description (optional)
+
+- year: 2024
+  en: "JSPS Research Fellowship (PD)"
+  jp: "日本学術振興会特別研究員（PD）"
+
+- year: 2022
+  en: "JSPS Overseas Challenge Program"
+  jp: "日本学術振興会 若手研究者海外挑戦プログラム"
+
+- year: 2021
+  en: "JSPS Research Fellowship (DC1)"
+  jp: "日本学術振興会特別研究員（DC1）"
+
+- year: 2019
+  en: "TAC-MI Student, Tokyo Tech"
+  jp: "東京工業大学物質・情報卓越教育院（TAC-MI）登録学生"

@@ -1,0 +1,22 @@
+# Invited talks (newest first)
+#
+# Fields:
+#   year:  int
+#   en:    English description (talk title in quotes, then venue)
+#   jp:    Japanese description (optional)
+
+- year: 2025
+  en: '"High-throughput exploration of photocatalysts," Pacifichem 2025, Honolulu, Hawaii, USA'
+
+- year: 2025
+  en: '"In-situ Analysis of Photoelectrode Kinetics," LAMP, Beijing, China'
+
+- year: 2025
+  en: '"The effect of temperature on titania photocatalysis," ACS Spring 2025, San Diego & Virtual'
+
+- year: 2025
+  en: '"The use of temperature as a parameter," 9th International Conference on Catalysis, San Francisco'
+
+- year: 2024
+  en: '"Estimation of Rate-Limiting Steps in Photocatalysis by IMPS," 98th Photofunctional Materials Study Group Conference'
+  jp: "光機能材料研究会 第98回講演会"

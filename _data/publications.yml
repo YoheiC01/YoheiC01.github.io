@@ -1,0 +1,223 @@
+# Publications (newest first)
+#
+# Field reference
+#   authors:   string. Use [[Yohei Cho]] to highlight your name; append * after a name to mark corresponding author
+#   title:     string. Inline HTML allowed (e.g. <sub>2</sub>)
+#   journal:   string
+#   volume:    int or string (optional)
+#   issue:     int or string (optional)
+#   pages:     string (optional). e.g. "16204–16211" or "Article 8261"
+#   year:      int
+#   doi:       string. Just the DOI suffix (e.g. "10.1039/D6SE00038J")
+#   status:    string (optional). e.g. "accepted in press" — overrides volume/pages/issue
+#   note:      string (optional). e.g. "Preprint", "Front Cover"
+
+- authors: "Hiroki Nagai, Hiroaki Kaneko, [[Yohei Cho]], Akira Yamaguchi, and Masahiro Miyauchi*"
+  title: "Selective oxidation of polyolefins to carbon monoxide by photo assisted catalysts"
+  journal: "Sustainable Energy & Fuels"
+  status: "accepted in press"
+  year: 2026
+  doi: "10.1039/D6SE00038J"
+
+- authors: "[[Yohei Cho]], Kyo Yanagiyama, Emi Sawade, Sunao Nakanowatari, Toru Wada, and Toshiaki Taniike"
+  title: "High-Throughput Experimentation on Oxide Photocatalyst: From Large-Scale Screening to Kinetic Insights"
+  journal: "ChemRxiv"
+  year: 2026
+  doi: "10.26434/chemrxiv.15000260/v2"
+  note: "Preprint"
+
+- authors: "Sho Uchida, Yuta Sekine, [[Yohei Cho]], Akira Yamaguchi, Toyokazu Tanabe, Kenji Yamaguchi*, and Masahiro Miyauchi*"
+  title: "Computational and Experimental Realization of Metal-Ion-Doped Orthorhombic Sn<sub>3</sub>O<sub>4</sub> for Visible-Light-Active Photocatalysis"
+  journal: "Journal of the American Chemical Society"
+  volume: 148
+  issue: 6
+  pages: "6036–6044"
+  year: 2026
+  doi: "10.1021/jacs.5c15962"
+
+- authors: "Kyo Yanagiyama, [[Yohei Cho]], Krishnamoorthy Sathiyan, Daisuke Ito, Hiroki Takahashi, and Toshiaki Taniike*"
+  title: "Discovering descriptors linking catalyst film uniformity to oxygen reduction reaction performance"
+  journal: "Science and Technology of Advanced Materials: Methods"
+  volume: 6
+  issue: 1
+  year: 2026
+  doi: "10.1080/27660400.2026.2613940"
+
+- authors: "[[Yohei Cho]]*, Osamu Tagami, Kyo Yanagiyama, Kazuma Gotoh, Emi Sawade, Toru Wada, and Toshiaki Taniike*"
+  title: "A Simple Microplate Assay for Accelerated Photocatalytic Activity Evaluation"
+  journal: "ACS Environmental Au"
+  volume: 6
+  issue: 1
+  pages: "134–143"
+  year: 2026
+  doi: "10.1021/acsenvironau.5c00200"
+  note: "Front Cover"
+
+- authors: "Hiroaki Kaneko, Shusaku Shoji, [[Yohei Cho]], Tomotaka Sugimura, Ayako Hashimoto, Hideki Abe, Akira Yamaguchi, and Masahiro Miyauchi*"
+  title: "Overcoming thermodynamic incompatibilities with photons: multi-carbon hydrocarbons from methane and carbon dioxide via a hybrid photocatalytic dry reforming/Fischer–Tropsch process"
+  journal: "Green Chem."
+  volume: 27
+  pages: "15056–15060"
+  year: 2025
+  doi: "10.1039/D5GC04326C"
+
+- authors: "Poulami Mukherjee*, [[Yohei Cho]], Panitha Phulkerd, and Toshiaki Taniike*"
+  title: "Accelerated Perovskite Discovery: Screening New Catalysts for Photocatalytic Methylene Blue Degradation"
+  journal: "Materials Advances"
+  volume: 6
+  pages: "4680–4686"
+  year: 2025
+  doi: "10.1039/d5ma00345h"
+
+- authors: "[[Yohei Cho]]*, Kyo Yanagiyama, Poulami Mukherjee, Panitha Phulkerd, Krishnamoorthy Sathiyan, Emi Sawade, Toru Wada, and Toshiaki Taniike*"
+  title: "Identifying Rate-Limiting Steps in Photocatalysis: A Temperature-and Light Intensity-Dependent Diagnostic of Charge Supply vs. Charge Transfer"
+  journal: "Journal of Materials Chemistry A"
+  volume: 13
+  pages: "16204–16211"
+  year: 2025
+  doi: "10.1039/D5TA00415B"
+
+- authors: "[[Yohei Cho]], Mengya Yang, Junyi Cui, Yue Yang, Surya Pratap Singh, Salvador Eslava, Daniele Benetti, James R. Durrant, Akira Yamaguchi, Masahiro Miyauchi, and Fumiaki Amano*"
+  title: "Analysis of TiO<sub>2</sub> Photoanode Process Using Intensity Modulated Photocurrent Spectroscopy and Distribution of Relaxation Times"
+  journal: "Journal of the American Chemical Society"
+  volume: 147
+  pages: "7703–7710"
+  year: 2025
+  doi: "10.1021/jacs.4c17345"
+
+- authors: "Aya Fujiwara, Sunao Nakanowatari, [[Yohei Cho]], and Toshiaki Taniike*"
+  title: "Acquiring and transferring comprehensive catalyst knowledge through integrated high-throughput experimentation and automatic feature engineering"
+  journal: "Science and Technology of Advanced Materials"
+  volume: 26
+  issue: 1
+  pages: "Article 2454219"
+  year: 2025
+  doi: "10.1080/14686996.2025.2454219"
+
+- authors: "[[Yohei Cho]], Tianhao He, Benjamin Moss, Daniele Benetti, Caiwu Liang, Lei Tian, Lucy Jessica F Hart, Anna A Wilson, Yu Taniguchi, Junyi Cui, Mengya Yang, Salvador Eslava, Akira Yamaguchi, Masahiro Miyauchi, and James R. Durrant*"
+  title: "Analyzing the Temperature Dependence of Titania Photocatalysis: Kinetic Competition between Water Oxidation Catalysis and Back Electron–Hole Recombination"
+  journal: "ACS Catalysis"
+  volume: 14
+  pages: "16543–16550"
+  year: 2024
+  doi: "10.1021/acscatal.4c03685"
+
+- authors: "Hiroaki Kaneko, [[Yohei Cho]], Tomotaka Sugimura, Ayako Hashimoto, Akira Yamaguchi, and Masahiro Miyauchi*"
+  title: "Sustaining syngas production at a near-unity H<sub>2</sub>/CO ratio in the photo-induced dry reforming of methane independent of the reactant gas composition"
+  journal: "Chemical Communications"
+  volume: 60
+  pages: "10406–10409"
+  year: 2024
+  doi: "10.1039/D4CC03088E"
+
+- authors: "Yue Yang, Masayuki Toyoda, Akira Yamaguchi, [[Yohei Cho]], An Niza El Aisnada, Hideki Abe, Shigenori Ueda, Sayuri Okunaka, Susumu Saito, Min Liu, Hiromasa Tokudome, and Masahiro Miyauchi*"
+  title: "Bandgap widening through doping for improving the photocatalytic oxidation ability of narrow-bandgap semiconductors"
+  journal: "Physical Chemistry Chemical Physics"
+  volume: 25
+  pages: "255–261"
+  year: 2023
+  doi: "10.1039/D2CP02994D"
+
+- authors: "Natsumi Noguchi, Shin-ichi Ito, Miwa Hikichi, [[Yohei Cho]], Kazuho Goto, Atsushi Kubo, Iwao Matsuda, Takeshi Fujita, Masahiro Miyauchi, and Takahiro Kondo*"
+  title: "Highly dispersed Ni nanoclusters spontaneously formed on hydrogen boride sheets"
+  journal: "Molecules"
+  volume: 27
+  pages: "Article 8261"
+  year: 2022
+  doi: "10.3390/molecules27238261"
+
+- authors: "[[Yohei Cho]], Akira Yamaguchi, Aaron Syahronitua Sinaga, Yue Yang, and Masahiro Miyauchi*"
+  title: "Photocatalysis under thermally shifted bandgap"
+  journal: "Applied Catalysis A: General"
+  volume: 643
+  pages: "Article 118772"
+  year: 2022
+  doi: "10.1016/j.apcata.2022.118772"
+
+- authors: "Shusaku Shoji, Abdillah Sani Bin Mohd Najib, Min-Wen Yu, Tomokazu Yamamoto, Sou Yasuhara, Akira Yamaguchi, Xiaobo Peng, Syo Matsumura, Satoshi Ishii, [[Yohei Cho]], Takeshi Fujita, Shigenori Ueda, Kuo-Ping Chen, Hideki Abe*, and Masahiro Miyauchi*"
+  title: "Charge partitioning by intertwined metal-oxide nano-architectural networks for the photocatalytic dry reforming of methane"
+  journal: "Chem Catalysis"
+  volume: 2
+  pages: "321–329"
+  year: 2022
+  doi: "10.1016/j.checat.2021.11.015"
+
+- authors: "Masaru Kushida, Akira Yamaguchi, [[Yohei Cho]], Takeshi Fujita, Hideki Abe, and Masahiro Miyauchi*"
+  title: "Gas-Phase Photoelectrocatalysis Mediated by Oxygen Ions for Uphill Conversion of Greenhouse Gases"
+  journal: "ChemPhotoChem"
+  volume: 5
+  pages: "275–281"
+  year: 2021
+  doi: "10.1002/cptc.202000228"
+
+- authors: "[[Yohei Cho]], Akira Yamaguchi, and Masahiro Miyauchi*"
+  title: "Photocatalytic methane reforming: recent advances"
+  journal: "Catalysts"
+  volume: 11
+  pages: "Article 18"
+  year: 2021
+  doi: "10.3390/catal11010018"
+
+- authors: "Abdillah Sani Bin Mohd Najib, Muhammad Iqbal, Mohamed Barakat Zakaria, Shusaku Shoji, [[Yohei Cho]], Xiaobo Peng, Shigenori Ueda, Ayako Hashimoto, Takeshi Fujita, Masahiro Miyauchi, Yusuke Yamauchi*, and Hideki Abe*"
+  title: "Active faceted nanoporous ruthenium for electrocatalytic hydrogen evolution"
+  journal: "Journal of Materials Chemistry A"
+  volume: 8
+  pages: "19788–19792"
+  year: 2020
+  doi: "10.1039/d0ta04223d"
+
+- authors: "[[Yohei Cho]], Akira Yamaguchi, Ryo Uehara, Satoru Yasuhara, Takuya Hoshina, and Masahiro Miyauchi*"
+  title: "Temperature dependence on bandgap of semiconductor photocatalysts"
+  journal: "The Journal of Chemical Physics"
+  volume: 152
+  pages: "Article 234706"
+  year: 2020
+  doi: "10.1063/5.0012330"
+
+- authors: "Kazu Takeda, Akira Yamaguchi, [[Yohei Cho]], Oruganti Anjaneyulu, Takeshi Fujita, Hideki Abe, and Masahiro Miyauchi*"
+  title: "Metal carbide as a light-harvesting and anticoking catalysis support for dry reforming of methane"
+  journal: "Global Challenges"
+  volume: 4
+  pages: "Article 1900067"
+  year: 2020
+  doi: "10.1002/gch2.201900067"
+
+- authors: "Hikari Nishiguchi, Abdillah Sani Bin Mohd Najib, Xiaobo Peng, [[Yohei Cho]], Ayako Hashimoto, Shigenori Ueda, Takeshi Fujita, Masahiro Miyauchi, and Hideki Abe*"
+  title: "Intertwined nickel and magnesium oxide rival precious metals for catalytic reforming of greenhouse gases"
+  journal: "Advanced Sustainable Systems"
+  volume: 4
+  pages: "Article 2000041"
+  year: 2020
+  doi: "10.1002/adsu.202000041"
+
+- authors: "[[Yohei Cho]], Shusaku Shoji, Akira Yamaguchi, Takuya Hoshina, Takeshi Fujita, Hideki Abe, and Masahiro Miyauchi*"
+  title: "Visible-light-driven dry reforming of methane using a semiconductor-supported catalyst"
+  journal: "Chemical Communications"
+  volume: 56
+  pages: "4611–4614"
+  year: 2020
+  doi: "10.1039/d0cc00729c"
+
+- authors: "Shusaku Shoji, Xiaobo Peng, Akira Yamaguchi, Ryo Watanabe, Choji Fukuhara, [[Yohei Cho]], Tomokazu Yamamoto, Syo Matsumura, Min-Wen Yu, Satoshi Ishii, Takeshi Fujita*, Hideki Abe*, and Masahiro Miyauchi*"
+  title: "Photocatalytic uphill conversion of natural gas beyond the limitation of thermal reaction systems"
+  journal: "Nature Catalysis"
+  volume: 3
+  pages: "148–153"
+  year: 2020
+  doi: "10.1038/s41929-019-0419-z"
+
+- authors: "Yongzheng Zhang, [[Yohei Cho]], Akira Yamaguchi, Xiaobo Peng, Masahiro Miyauchi, Hideki Abe, and Takeshi Fujita*"
+  title: "CO<sub>2</sub> oxidative coupling of methane using an earth-abundant CaO-based catalyst"
+  journal: "Scientific Reports"
+  volume: 9
+  pages: "Article 15454"
+  year: 2019
+  doi: "10.1038/s41598-019-51817-2"
+
+- authors: "Takeshi Fujita, Xiaobo Peng, Akira Yamaguchi, [[Yohei Cho]], Yongzheng Zhang, Kimitaka Higuchi, Yuta Yamamoto, Tomoharu Tokunaga, Shigeo Arai, Masahiro Miyauchi, and Hideki Abe*"
+  title: "Nanoporous nickel composite catalyst for the dry reforming of methane"
+  journal: "ACS Omega"
+  volume: 3
+  pages: "16651–16657"
+  year: 2018
+  doi: "10.1021/acsomega.8b02023"

@@ -1,0 +1,37 @@
+# Career and education entries (newest first)
+#
+# Fields:
+#   date:  string — e.g. "2025 – Present", "2024 – 2025", "2022"
+#   en:    English description
+#   jp:    Japanese description (optional)
+
+- date: "2025 – Present"
+  en: "Assistant Professor, Institute of Science Tokyo"
+  jp: "助教、東京科学大学"
+
+- date: "2025"
+  en: "Research Assistant Professor (JSPS-PD), Japan Advanced Institute of Science and Technology"
+  jp: "特任助教（日本学術振興会特別研究員-PD）、北陸先端科学技術大学院大学"
+
+- date: "2024 – 2025"
+  en: "JSPS Postdoctoral Fellow (PD), Japan Advanced Institute of Science and Technology"
+  jp: "日本学術振興会特別研究員PD 北陸先端科学技術大学院大学"
+
+- date: "2023 – 2024"
+  en: "JSPS Postdoctoral Fellow (PD), Tokyo Institute of Technology"
+  jp: "日本学術振興会特別研究員PD 東京工業大学"
+
+- date: "2022"
+  en: "Visiting Student, Department of Chemistry, Imperial College London"
+
+- date: "2021 – 2023"
+  en: "Ph.D. in Materials Science and Engineering, Tokyo Institute of Technology"
+  jp: "東京工業大学物質理工学院材料系 博士課程"
+
+- date: "2019 – 2021"
+  en: "M.Sc. in Materials Science and Engineering, Tokyo Institute of Technology"
+  jp: "東京工業大学物質理工学院材料系 修士課程"
+
+- date: "2015 – 2019"
+  en: "B.Sc. in Inorganic Materials Science, Tokyo Institute of Technology"
+  jp: "東京工業大学無機材料工学科 学士課程"
