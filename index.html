@@ -3,6 +3,8 @@ layout: default
 title: Yohei Cho
 ---
 
+{%- assign months = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," -%}
+
 <div class="container">
 
     <header class="header">
@@ -50,7 +52,7 @@ title: Yohei Cho
         <h2>Awards</h2>
         <ul class="entry-list">
             {% for item in site.data.awards %}
-            <li><span class="year">{{ item.year }}</span> {{ item.en }}{% if item.jp %}<span class="jp" lang="ja">{{ item.jp }}</span>{% endif %}</li>
+            <li><span class="year">{% if item.year_end %}{{ item.year }} – {{ item.year_end }}{% elsif item.month %}{{ months[item.month | minus: 1] }} {{ item.year }}{% else %}{{ item.year }}{% endif %}</span> {{ item.en }}{% if item.jp %}<span class="jp" lang="ja">{{ item.jp }}</span>{% endif %}</li>
             {% endfor %}
         </ul>
     </section>
@@ -59,7 +61,7 @@ title: Yohei Cho
         <h2>Fellowships</h2>
         <ul class="entry-list">
             {% for item in site.data.fellowships %}
-            <li><span class="year">{{ item.year }}</span> {{ item.en }}{% if item.jp %}<span class="jp" lang="ja">{{ item.jp }}</span>{% endif %}</li>
+            <li><span class="year">{% if item.year_end %}{{ item.year }} – {{ item.year_end }}{% elsif item.month %}{{ months[item.month | minus: 1] }} {{ item.year }}{% else %}{{ item.year }}{% endif %}</span> {{ item.en }}{% if item.jp %}<span class="jp" lang="ja">{{ item.jp }}</span>{% endif %}</li>
             {% endfor %}
         </ul>
     </section>
@@ -68,7 +70,7 @@ title: Yohei Cho
         <h2>Invited Talks</h2>
         <ul class="entry-list">
             {% for item in site.data.talks %}
-            <li><span class="year">{{ item.year }}</span> {{ item.en }}{% if item.jp %}<span class="jp" lang="ja">{{ item.jp }}</span>{% endif %}</li>
+            <li><span class="year">{% if item.year_end %}{{ item.year }} – {{ item.year_end }}{% elsif item.month %}{{ months[item.month | minus: 1] }} {{ item.year }}{% else %}{{ item.year }}{% endif %}</span> {{ item.en }}{% if item.jp %}<span class="jp" lang="ja">{{ item.jp }}</span>{% endif %}</li>
             {% endfor %}
         </ul>
     </section>

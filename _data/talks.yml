@@ -1,9 +1,12 @@
 # Invited talks (newest first)
 #
 # Fields:
-#   year:  int
-#   en:    English description (talk title in quotes, then venue)
-#   jp:    Japanese description (optional)
+#   year:     int — required
+#   year_end: int or "Present" (optional, rare for talks). →  displayed as "2024 – 2025"
+#   month:    int (1-12, optional). e.g. 12  →  displayed as "Dec 2025"
+#                                  (ignored if year_end is set)
+#   en:       English description (talk title in quotes, then venue)
+#   jp:       Japanese description (optional)
 
 - year: 2025
   en: '"High-throughput exploration of photocatalysts," Pacifichem 2025, Honolulu, Hawaii, USA'

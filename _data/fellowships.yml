@@ -1,10 +1,12 @@
 # Fellowships (newest first)
 #
 # Fields:
-#   year:  int
-#   month: int (1-12, optional). e.g. 4  →  displayed as "Apr 2024"
-#   en:    English description
-#   jp:    Japanese description (optional)
+#   year:     int — start year (required)
+#   year_end: int or "Present" (optional). e.g. 2024  →  displayed as "2021 – 2024"
+#   month:    int (1-12, optional). e.g. 4  →  displayed as "Apr 2024"
+#                                  (ignored if year_end is set)
+#   en:       English description
+#   jp:       Japanese description (optional)
 
 - year: 2024
   year_end: 2025
