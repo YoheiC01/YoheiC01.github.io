@@ -12,6 +12,15 @@
 #   status:    string (optional). e.g. "accepted in press" — overrides volume/pages/issue
 #   note:      string (optional). e.g. "Preprint", "Front Cover"
 
+- authors: "Masaki Imura, Yuta Yamamoto, [[Yohei Cho]], Akira Yamaguchi, Shin-ichi Ito, Yasuyuki Hikita, Takahiro Kondo*, and Masahiro Miyauchi*"
+  title: "Boosted hydrogen production via binder-assisted immobilization of hydrogen boride sheets on cathodes"
+  journal: "Sustainable Energy & Fuels"
+  volume: 10
+  issue: 10
+  pages: "2478–2485"
+  year: 2026
+  doi: "10.1039/D6SE00145A"
+
 - authors: "Hiroki Nagai, Hiroaki Kaneko, [[Yohei Cho]], Akira Yamaguchi, and Masahiro Miyauchi*"
   title: "Selective oxidation of polyolefins to carbon monoxide by photo assisted catalysts"
   journal: "Sustainable Energy & Fuels"
