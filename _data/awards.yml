@@ -3,30 +3,23 @@
 # Fields:
 #   year:     int — required
 #   year_end: int or "Present" (optional, rare for awards). →  displayed as "2021 – 2024"
-#   month:    int (1-12, optional). e.g. 7  →  displayed as "Jul 2024"
-#                                  (ignored if year_end is set)
 #   en:       English description
 #   jp:       Japanese description (optional)
 
 - year: 2024
-  month: 7
   en: 'Oral Presentation Award, "Analysis of photoanodic processes using intensity modulated photocurrent spectroscopy (IMPS) and distribution of relaxation time (DRT)," IPS-24 / ICARP2024'
 
 - year: 2024
-  month: 5
   en: "Leave a Nest grant KYOCERA award"
   jp: "リバネス助成 京セラ賞「ハイスループット実験による高効率水素生成光触媒の探索」"
 
 - year: 2022
-  month: 7
   en: "Tokyo Tech Excellence Award (TAC-MI)"
   jp: "東京工業大学物質・情報卓越教育院（TAC-MI）優秀特別賞"
 
 - year: 2022
-  month: 12
   en: "Encouragement Award, 27th Symposium on Recent Developments in Photocatalysis"
   jp: "第27回シンポジウム「光触媒反応の最近の展開」奨励賞"
 
 - year: 2020
-  month: 10
   en: 'Excellent Presentation Award, "Visible light driven Dry Reforming of Methane Using Semiconductor Supported Catalyst," The 13th PACRIM'
