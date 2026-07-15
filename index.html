@@ -43,7 +43,7 @@ title: Yohei Cho
             {%- else -%}
                 {{ " " }}({{ pub.year }})
             {%- endif -%}
-            . <a href="https://doi.org/{{ pub.doi }}">doi:{{ pub.doi }}</a>{% if pub.note %} <span class="pub-note">({{ pub.note }})</span>{% endif %}</li>
+            .{% if pub.doi %} <a href="https://doi.org/{{ pub.doi }}">doi:{{ pub.doi }}</a>{% endif %}{% if pub.note %} <span class="pub-note">({{ pub.note }})</span>{% endif %}</li>
             {%- endfor %}
         </ol>
     </section>
