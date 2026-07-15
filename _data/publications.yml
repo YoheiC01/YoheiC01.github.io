@@ -12,11 +12,12 @@
 #   status:    string (optional). e.g. "accepted in press" — overrides volume/pages/issue
 #   note:      string (optional). e.g. "Preprint", "Front Cover"
 
-- authors: "[[Yohei Cho]]*, Kyo Yanagiyama, Emi Sawade, Sunao Nakanowatari, Toru Wada, and Toshiaki Taniike*"
-  title: "Element-Dependent Charge-Supply and Charge-Transfer Balance in Oxide Photocatalysts Identified by High-Throughput Kinetic Screening"
-  journal: "Journal of Materials Chemistry A"
-  year: 2026
-  status: "accepted in press"
+# --- プレスリリース前のため一時非表示 (2026-07-16)。PR後にこのコメントを外して再掲する ---
+#- authors: "[[Yohei Cho]]*, Kyo Yanagiyama, Emi Sawade, Sunao Nakanowatari, Toru Wada, and Toshiaki Taniike*"
+#  title: "Element-Dependent Charge-Supply and Charge-Transfer Balance in Oxide Photocatalysts Identified by High-Throughput Kinetic Screening"
+#  journal: "Journal of Materials Chemistry A"
+#  year: 2026
+#  status: "accepted in press"
 
 - authors: "Masaki Imura, Yuta Yamamoto, [[Yohei Cho]], Akira Yamaguchi, Shin-ichi Ito, Yasuyuki Hikita, Takahiro Kondo*, and Masahiro Miyauchi*"
   title: "Boosted hydrogen production via binder-assisted immobilization of hydrogen boride sheets on cathodes"
