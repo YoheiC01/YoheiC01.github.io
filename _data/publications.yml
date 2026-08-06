@@ -80,6 +80,7 @@
   title: "Overcoming thermodynamic incompatibilities with photons: multi-carbon hydrocarbons from methane and carbon dioxide via a hybrid photocatalytic dry reforming/Fischer–Tropsch process"
   journal: "Green Chemistry"
   volume: 27
+  issue: 47
   pages: "15056–15060"
   year: 2025
   doi: "10.1039/D5GC04326C"
@@ -88,6 +89,7 @@
   title: "Accelerated Perovskite Discovery: Screening New Catalysts for Photocatalytic Methylene Blue Degradation"
   journal: "Materials Advances"
   volume: 6
+  issue: 14
   pages: "4680–4686"
   year: 2025
   doi: "10.1039/d5ma00345h"
@@ -96,6 +98,7 @@
   title: "Identifying Rate-Limiting Steps in Photocatalysis: A Temperature- and Light Intensity-Dependent Diagnostic of Charge Supply vs. Charge Transfer"
   journal: "Journal of Materials Chemistry A"
   volume: 13
+  issue: 21
   pages: "16204–16211"
   year: 2025
   doi: "10.1039/D5TA00415B"
@@ -108,6 +111,7 @@
   title: "Analysis of the TiO<sub>2</sub> Photoanode Process Using Intensity Modulated Photocurrent Spectroscopy and Distribution of Relaxation Times"
   journal: "Journal of the American Chemical Society"
   volume: 147
+  issue: 9
   pages: "7703–7710"
   year: 2025
   doi: "10.1021/jacs.4c17345"
@@ -138,6 +142,7 @@
   title: "Analyzing the Temperature Dependence of Titania Photocatalysis: Kinetic Competition between Water Oxidation Catalysis and Back Electron–Hole Recombination"
   journal: "ACS Catalysis"
   volume: 14
+  issue: 21
   pages: "16543–16550"
   year: 2024
   doi: "10.1021/acscatal.4c03685"
@@ -146,6 +151,7 @@
   title: "Sustaining syngas production at a near-unity H<sub>2</sub>/CO ratio in the photo-induced dry reforming of methane independent of the reactant gas composition"
   journal: "Chemical Communications"
   volume: 60
+  issue: 75
   pages: "10406–10409"
   year: 2024
   doi: "10.1039/D4CC03088E"
@@ -154,6 +160,7 @@
   title: "Bandgap widening through doping for improving the photocatalytic oxidation ability of narrow-bandgap semiconductors"
   journal: "Physical Chemistry Chemical Physics"
   volume: 25
+  issue: 1
   pages: "255–261"
   year: 2023
   doi: "10.1039/D2CP02994D"
@@ -162,6 +169,7 @@
   title: "Highly dispersed Ni nanoclusters spontaneously formed on hydrogen boride sheets"
   journal: "Molecules"
   volume: 27
+  issue: 23
   pages: "Article 8261"
   year: 2022
   doi: "10.3390/molecules27238261"
@@ -178,6 +186,7 @@
   title: "Charge partitioning by intertwined metal-oxide nano-architectural networks for the photocatalytic dry reforming of methane"
   journal: "Chem Catalysis"
   volume: 2
+  issue: 2
   pages: "321–329"
   year: 2022
   doi: "10.1016/j.checat.2021.11.015"
@@ -186,6 +195,7 @@
   title: "Gas-Phase Photoelectrocatalysis Mediated by Oxygen Ions for Uphill Conversion of Greenhouse Gases"
   journal: "ChemPhotoChem"
   volume: 5
+  issue: 3
   pages: "275–281"
   year: 2021
   doi: "10.1002/cptc.202000228"
@@ -194,6 +204,7 @@
   title: "Photocatalytic methane reforming: recent advances"
   journal: "Catalysts"
   volume: 11
+  issue: 1
   pages: "Article 18"
   year: 2021
   doi: "10.3390/catal11010018"
@@ -202,6 +213,7 @@
   title: "Active faceted nanoporous ruthenium for electrocatalytic hydrogen evolution"
   journal: "Journal of Materials Chemistry A"
   volume: 8
+  issue: 38
   pages: "19788–19792"
   year: 2020
   doi: "10.1039/d0ta04223d"
@@ -210,6 +222,7 @@
   title: "Temperature dependence on bandgap of semiconductor photocatalysts"
   journal: "The Journal of Chemical Physics"
   volume: 152
+  issue: 23
   pages: "Article 231101"
   year: 2020
   doi: "10.1063/5.0012330"
@@ -218,6 +231,7 @@
   title: "Metal carbide as a light-harvesting and anticoking catalysis support for dry reforming of methane"
   journal: "Global Challenges"
   volume: 4
+  issue: 1
   pages: "Article 1900067"
   year: 2020
   doi: "10.1002/gch2.201900067"
@@ -226,6 +240,7 @@
   title: "Intertwined nickel and magnesium oxide rival precious metals for catalytic reforming of greenhouse gases"
   journal: "Advanced Sustainable Systems"
   volume: 4
+  issue: 6
   pages: "Article 2000041"
   year: 2020
   doi: "10.1002/adsu.202000041"
@@ -234,6 +249,7 @@
   title: "Visible-light-driven dry reforming of methane using a semiconductor-supported catalyst"
   journal: "Chemical Communications"
   volume: 56
+  issue: 33
   pages: "4611–4614"
   year: 2020
   doi: "10.1039/d0cc00729c"
@@ -242,6 +258,7 @@
   title: "Photocatalytic uphill conversion of natural gas beyond the limitation of thermal reaction systems"
   journal: "Nature Catalysis"
   volume: 3
+  issue: 2
   pages: "148–153"
   year: 2020
   doi: "10.1038/s41929-019-0419-z"
@@ -250,6 +267,7 @@
   title: "CO<sub>2</sub> oxidative coupling of methane using an earth-abundant CaO-based catalyst"
   journal: "Scientific Reports"
   volume: 9
+  issue: 1
   pages: "Article 15454"
   year: 2019
   doi: "10.1038/s41598-019-51817-2"
@@ -258,6 +276,7 @@
   title: "Nanoporous nickel composite catalyst for the dry reforming of methane"
   journal: "ACS Omega"
   volume: 3
+  issue: 12
   pages: "16651–16657"
   year: 2018
   doi: "10.1021/acsomega.8b02023"
