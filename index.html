@@ -32,7 +32,7 @@ title: Yohei Cho
 
     <section id="publications" class="fade-in">
         <h2>Publications</h2>
-        <ol class="pub-list">
+        <ol class="pub-list" style="counter-reset: pub-counter {{ site.data.publications | size | plus: 1 }}">
             {%- for pub in site.data.publications -%}
             {%- assign authors = pub.authors | replace: "[[", '<span class="author-highlight">' | replace: "]]", "</span>" -%}
             <li class="pub-item">{{ authors }}, <span class="pub-title">"{{ pub.title }},"</span> <em>{{ pub.journal }}</em>

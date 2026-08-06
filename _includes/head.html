@@ -1,6 +1,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Marks the document as scripted before first paint. The scroll fade-in
+     starts from opacity:0, so it is gated on this class: with JS off the
+     class never lands and every section just renders. -->
+<script>document.documentElement.classList.add('js');</script>
+
 <title>{{ page.title | default: site.title }} | Photocatalysis, Photoelectrochemistry, Solar Energy Conversion, High-Throughput Exploration</title>
 <meta name="description" content="{{ site.description }}">
 <meta name="robots" content="index, follow">

@@ -273,9 +273,19 @@ footer .container { margin-bottom: 0; }
 footer a { color: var(--text-secondary); text-decoration: none; font-weight: 500; }
 footer a:hover { color: var(--accent); }
 
-/* Fade-in */
-.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.fade-in.visible { opacity: 1; transform: translateY(0); }
+/* Fade-in on scroll — enhancement only. The hidden starting state is scoped
+   to .js (set by an inline script in head.html), so with JavaScript off the
+   sections never hide in the first place. */
+.js .fade-in {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.js .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .js .fade-in { opacity: 1; transform: none; transition: none; }
+}
 
 /* Below 900px the rail collapses back to a top bar */
 @media (max-width: 900px) {
