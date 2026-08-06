@@ -11,6 +11,8 @@
 #   doi:       string. Just the DOI suffix (e.g. "10.1039/D6SE00038J")
 #   status:    string (optional). e.g. "accepted in press" — overrides volume/pages/issue
 #   note:      string (optional). e.g. "Preprint", "Front Cover"
+#   press:     list (optional). Press releases and media coverage for this paper.
+#              Each item: outlet (string), url (string), date ("YYYY-MM-DD", optional)
 
 - authors: "[[Yohei Cho]]*, Kyo Yanagiyama, Emi Sawade, Sunao Nakanowatari, Toru Wada, and Toshiaki Taniike*"
   title: "Element-Dependent Charge-Supply and Charge-Transfer Balance in Oxide Photocatalysts Identified by High-Throughput Kinetic Screening"
@@ -44,6 +46,10 @@
   pages: "6036–6044"
   year: 2026
   doi: "10.1021/jacs.5c15962"
+  press:
+    - outlet: "Science Tokyo"
+      date: "2026-02-10"
+      url: "https://www.isct.ac.jp/ja/news/jdmhtu6yr3mh"
 
 - authors: "Kyo Yanagiyama, [[Yohei Cho]], Krishnamoorthy Sathiyan, Daisuke Ito, Hiroki Takahashi, and Toshiaki Taniike*"
   title: "Discovering descriptors linking catalyst film uniformity to oxygen reduction reaction performance"
@@ -61,6 +67,13 @@
   pages: "134–143"
   year: 2026
   doi: "10.1021/acsenvironau.5c00200"
+  press:
+    - outlet: "JAIST"
+      date: "2025-12-22"
+      url: "https://www.jaist.ac.jp/whatsnew/press/2025/12/22-1.html"
+    - outlet: "Science Tokyo"
+      date: "2025-12-22"
+      url: "https://www.isct.ac.jp/ja/news/92qni3m6kfa6"
   note: "Front Cover"
 
 - authors: "Hiroaki Kaneko, Shusaku Shoji, [[Yohei Cho]], Tomotaka Sugimura, Ayako Hashimoto, Hideki Abe, Akira Yamaguchi, and Masahiro Miyauchi*"
@@ -86,6 +99,10 @@
   pages: "16204–16211"
   year: 2025
   doi: "10.1039/D5TA00415B"
+  press:
+    - outlet: "JAIST"
+      date: "2025-05-12"
+      url: "https://www.jaist.ac.jp/whatsnew/press/2025/05/12-1.html"
 
 - authors: "[[Yohei Cho]], Mengya Yang, Junyi Cui, Yue Yang, Surya Pratap Singh, Salvador Eslava, Daniele Benetti, James R. Durrant, Akira Yamaguchi, Masahiro Miyauchi, and Fumiaki Amano*"
   title: "Analysis of the TiO<sub>2</sub> Photoanode Process Using Intensity Modulated Photocurrent Spectroscopy and Distribution of Relaxation Times"
@@ -94,6 +111,19 @@
   pages: "7703–7710"
   year: 2025
   doi: "10.1021/jacs.4c17345"
+  press:
+    - outlet: "JAIST"
+      date: "2025-02-25"
+      url: "https://www.jaist.ac.jp/whatsnew/press/2025/02/25-1.html"
+    - outlet: "Science Tokyo"
+      date: "2025-02-26"
+      url: "https://www.isct.ac.jp/ja/news/h8eilm2tmpgv"
+    - outlet: "Tokyo Metropolitan University"
+      date: "2025-02-25"
+      url: "https://www.tmu.ac.jp/news/topics/37369.html"
+    - outlet: "Nikkan Kogyo Shimbun"
+      date: "2025-03-04"
+      url: "https://www.nikkan.co.jp/articles/view/00741782"
 
 - authors: "Aya Fujiwara, Sunao Nakanowatari, [[Yohei Cho]], and Toshiaki Taniike*"
   title: "Acquiring and transferring comprehensive catalyst knowledge through integrated high-throughput experimentation and automatic feature engineering"
