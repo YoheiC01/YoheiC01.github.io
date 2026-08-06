@@ -11,7 +11,7 @@ title: Yohei Cho
         <img src="{{ '/profile-pic.jpg' | relative_url }}" alt="Portrait of Yohei Cho" class="profile-pic">
         <div class="header-text">
             <h1>Yohei Cho <span class="name-jp" lang="ja">張葉平</span></h1>
-            <div class="title">Assistant Professor, Institute of Science Tokyo<br>Photocatalysis / Photoelectrochemistry / Solar Energy Conversion / High-Throughput Exploration</div>
+            <div class="title">Assistant Professor, Institute of Science Tokyo</div>
         </div>
     </header>
 
@@ -43,7 +43,9 @@ title: Yohei Cho
             {%- else -%}
                 {{ " " }}({{ pub.year }})
             {%- endif -%}
-            .{% if pub.doi %} <a href="https://doi.org/{{ pub.doi }}">doi:{{ pub.doi }}</a>{% endif %}{% if pub.note %} <span class="pub-note">({{ pub.note }})</span>{% endif %}</li>
+            .{% if pub.doi %} <a href="https://doi.org/{{ pub.doi }}">doi:{{ pub.doi }}</a>{% endif %}{% if pub.note %} <span class="pub-note">({{ pub.note }})</span>{% endif %}
+            {%- if pub.press %}<span class="pub-press"><span class="pub-press-label">Press</span><span class="pub-press-items">{% for item in pub.press %}{% unless forloop.first %} <span class="pub-press-sep">·</span> {% endunless %}<a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.outlet }}</a>{% endfor %}</span></span>{% endif -%}
+            </li>
             {%- endfor %}
         </ol>
     </section>
@@ -52,7 +54,7 @@ title: Yohei Cho
         <h2>Awards</h2>
         <ul class="entry-list">
             {% for item in site.data.awards %}
-            <li><span class="year">{% if item.year_end %}{{ item.year }} – {{ item.year_end }}{% elsif item.month %}{{ months[item.month | minus: 1] }} {{ item.year }}{% else %}{{ item.year }}{% endif %}</span> {{ item.en }}{% if item.jp %}<span class="jp" lang="ja">{{ item.jp }}</span>{% endif %}</li>
+            <li><span class="year">{% if item.year_end %}{{ item.year }} – {{ item.year_end }}{% elsif item.month %}{{ months[item.month | minus: 1] }} {{ item.year }}{% else %}{{ item.year }}{% endif %}</span><div class="entry-body">{{ item.en }}{% if item.jp %}<span class="jp" lang="ja">{{ item.jp }}</span>{% endif %}</div></li>
             {% endfor %}
         </ul>
     </section>
@@ -61,7 +63,7 @@ title: Yohei Cho
         <h2>Fellowships</h2>
         <ul class="entry-list">
             {% for item in site.data.fellowships %}
-            <li><span class="year">{% if item.year_end %}{{ item.year }} – {{ item.year_end }}{% elsif item.month %}{{ months[item.month | minus: 1] }} {{ item.year }}{% else %}{{ item.year }}{% endif %}</span> {{ item.en }}{% if item.jp %}<span class="jp" lang="ja">{{ item.jp }}</span>{% endif %}</li>
+            <li><span class="year">{% if item.year_end %}{{ item.year }} – {{ item.year_end }}{% elsif item.month %}{{ months[item.month | minus: 1] }} {{ item.year }}{% else %}{{ item.year }}{% endif %}</span><div class="entry-body">{{ item.en }}{% if item.jp %}<span class="jp" lang="ja">{{ item.jp }}</span>{% endif %}</div></li>
             {% endfor %}
         </ul>
     </section>
@@ -70,7 +72,7 @@ title: Yohei Cho
         <h2>Invited Talks</h2>
         <ul class="entry-list">
             {% for item in site.data.talks %}
-            <li><span class="year">{% if item.year_end %}{{ item.year }} – {{ item.year_end }}{% elsif item.month %}{{ months[item.month | minus: 1] }} {{ item.year }}{% else %}{{ item.year }}{% endif %}</span> {{ item.en }}{% if item.jp %}<span class="jp" lang="ja">{{ item.jp }}</span>{% endif %}</li>
+            <li><span class="year">{% if item.year_end %}{{ item.year }} – {{ item.year_end }}{% elsif item.month %}{{ months[item.month | minus: 1] }} {{ item.year }}{% else %}{{ item.year }}{% endif %}</span><div class="entry-body">{{ item.en }}{% if item.jp %}<span class="jp" lang="ja">{{ item.jp }}</span>{% endif %}</div></li>
             {% endfor %}
         </ul>
     </section>
