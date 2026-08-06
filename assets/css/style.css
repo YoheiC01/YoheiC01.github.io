@@ -102,10 +102,14 @@ body {
     letter-spacing: -0.03em; line-height: 1.1;
 }
 
-.header-text h1 .name-jp {
+/* Own line under the name: the English name plus ", Ph.D." already fills the
+   44px line, so hanging the Japanese name and degree off its end left the
+   header lopsided. */
+.header-text .name-jp {
     font-family: var(--font-jp);
     font-size: 19px; color: var(--text-muted);
-    font-weight: 400; margin-left: 13px; letter-spacing: 0.05em;
+    font-weight: 400; letter-spacing: 0.05em;
+    margin-top: 10px;
 }
 
 .header-text .title {
@@ -313,7 +317,7 @@ footer a:hover { color: var(--accent); }
     .header { flex-direction: column; align-items: flex-start; padding: 44px 0 36px; gap: 22px; }
     .profile-pic { width: 112px; height: 112px; }
     .header-text h1 { font-size: 31px; }
-    .header-text h1 .name-jp { display: block; margin-left: 0; margin-top: 6px; }
+    .header-text .name-jp { font-size: 17px; margin-top: 7px; }
     .nav-links {
         display: none; flex-direction: column; position: absolute;
         top: 58px; left: 0; right: 0; background: var(--bg-rail);
