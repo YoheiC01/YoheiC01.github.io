@@ -44,7 +44,7 @@ title: Yohei Cho
             {%- else -%}
                 {{ " " }}({{ pub.year }})
             {%- endif -%}
-            .{% if pub.doi %} <a href="https://doi.org/{{ pub.doi }}">doi:{{ pub.doi }}</a>{% endif %}{% if pub.note %} <span class="pub-note">({{ pub.note }})</span>{% endif %}
+            .{% if pub.doi %} <a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener">doi:{{ pub.doi }}</a>{% endif %}{% if pub.note %} <span class="pub-note">({{ pub.note }})</span>{% endif %}
             {%- if pub.press %}<span class="pub-press"><span class="pub-press-label">Press</span><span class="pub-press-items">{% for item in pub.press %}{% unless forloop.first %} <span class="pub-press-sep">·</span> {% endunless %}<a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.outlet }}</a>{% endfor %}</span></span>{% endif -%}
             </li>
             {%- endfor %}
