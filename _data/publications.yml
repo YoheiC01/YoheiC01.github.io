@@ -26,6 +26,9 @@
     - outlet: "JAIST"
       date: "2026-08-18"
       url: "https://www.jaist.ac.jp/whatsnew/press/2026/08/18-1.html"
+    - outlet: "Tokyo University of Science"
+      date: "2026-08-24"
+      url: "https://www.tus.ac.jp/today/archive/20260824_0124.html"
 
 - authors: "Masaki Imura, Yuta Yamamoto, [[Yohei Cho]], Akira Yamaguchi, Shin-ichi Ito, Yasuyuki Hikita, Takahiro Kondo*, and Masahiro Miyauchi*"
   title: "Boosted hydrogen production via binder-assisted immobilization of hydrogen boride sheets on cathodes"
