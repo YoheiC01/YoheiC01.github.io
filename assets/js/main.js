@@ -23,11 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(el => observer.observe(el));
 });
 
-// Sticky nav border on scroll
-window.addEventListener('scroll', function() {
-    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10);
-});
-
 // Mobile menu toggle
 function toggleMenu() {
     document.getElementById('nav-links').classList.toggle('open');

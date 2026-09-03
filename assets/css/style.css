@@ -42,14 +42,14 @@ body {
 }
 
 /* Top nav */
+/* A step off --bg (not the same off-white) so the bar reads as its own strip
+   rather than blending into whatever page content sits beneath it. */
 .nav {
     position: sticky; top: 0; z-index: 100;
-    background: rgba(253, 253, 251, 0.92);
+    background: rgba(219, 234, 232, 0.96);
     backdrop-filter: saturate(180%) blur(10px);
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s;
+    border-bottom: 1px solid var(--border);
 }
-.nav.scrolled { border-bottom-color: var(--border); }
 
 .nav-inner {
     max-width: 860px; margin: 0 auto;
