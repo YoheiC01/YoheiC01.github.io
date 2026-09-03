@@ -46,3 +46,38 @@ window.addEventListener('resize', () => {
         document.getElementById('nav-links').classList.remove('open');
     }
 });
+
+// Highlights lightbox (highlights.html only — elements are absent elsewhere)
+(() => {
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox) return;
+
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    function open(frame) {
+        lightboxImg.src = frame.dataset.img;
+        lightboxImg.alt = frame.dataset.alt || '';
+        lightbox.classList.add('open');
+    }
+
+    function close() {
+        lightbox.classList.remove('open');
+        // Wait for the fade/scale-out to finish before dropping the image,
+        // so it doesn't just vanish mid-transition.
+        setTimeout(() => {
+            if (!lightbox.classList.contains('open')) lightboxImg.src = '';
+        }, 200);
+    }
+
+    document.querySelectorAll('.gallery-frame').forEach(frame => {
+        frame.addEventListener('click', () => open(frame));
+    });
+    lightbox.addEventListener('click', close);
+    document.getElementById('lightbox-close').addEventListener('click', (e) => {
+        e.stopPropagation();
+        close();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('open')) close();
+    });
+})();

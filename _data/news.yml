@@ -1,0 +1,42 @@
+# News (newest first)
+#
+# Fields:
+#   date: "YYYY-MM-DD" — required, drives both sort order and the displayed date
+#   en:   English text. Plain sentence, no need to italicize the journal name.
+#   jp:   Japanese text (optional)
+#   doi:  string, just the DOI suffix (optional) — links the item to the paper
+#   url:  string (optional) — links the item to a non-paper page (grant, award, etc.); ignored if doi is set
+
+- date: "2026-08-31"
+  en: "New paper on element-dependent charge-supply/charge-transfer balance in oxide photocatalysts published in Journal of Materials Chemistry A, with press releases from JAIST, Tokyo University of Science, and Science Tokyo."
+  jp: "酸化物光触媒における電荷供給・電荷移動バランスの元素依存性に関する論文がJournal of Materials Chemistry Aに掲載されました。JAIST、東京理科大学、東京科学大学よりプレスリリースが出ています。"
+  doi: "10.1039/D6TA04494H"
+
+- date: "2026-06-22"
+  en: "Awarded the Asunaro Research Grant (Institute of Science Tokyo) for the project \"Systematic exploration of unexplored photocatalytic reaction space and reaction discovery.\""
+  jp: "あすなろ研究奨励金（東京科学大学）に採択されました。研究課題は「光触媒による未踏反応空間の体系的探索と反応創出」です。"
+  url: "https://www.rdc.isct.ac.jp/sci-eng/research-funding/asunaro-grant/"
+
+- date: "2026-02-10"
+  en: "New paper on metal-ion-doped orthorhombic Sn3O4 photocatalysts published in JACS, featured by Science Tokyo."
+  jp: "金属イオンをドープした直方晶Sn3O4光触媒に関する論文がJACSに掲載され、東京科学大学よりプレスリリースが出ています。"
+  doi: "10.1021/jacs.5c15962"
+
+- date: "2025-12-22"
+  en: "Our microplate assay paper was selected as the Front Cover of ACS Environmental Au, and featured by JAIST and Science Tokyo."
+  jp: "マイクロプレートアッセイに関する論文がACS Environmental Auの表紙（Front Cover）に選定され、JAISTと東京科学大学よりプレスリリースが出ています。"
+  doi: "10.1021/acsenvironau.5c00200"
+
+- date: "2025-09-01"
+  en: "Joined Institute of Science Tokyo as Assistant Professor."
+  jp: "東京科学大学に助教として着任しました。"
+
+- date: "2025-05-12"
+  en: "New paper diagnosing charge-supply vs. charge-transfer limits in photocatalysis published in Journal of Materials Chemistry A, featured by JAIST."
+  jp: "光触媒における電荷供給律速・電荷移動律速を診断する手法に関する論文がJournal of Materials Chemistry Aに掲載され、JAISTよりプレスリリースが出ています。"
+  doi: "10.1039/D5TA00415B"
+
+- date: "2025-02-25"
+  en: "New IMPS/DRT analysis of TiO2 photoanodes published in JACS, covered by JAIST, Science Tokyo, Tokyo Metropolitan University, and Nikkan Kogyo Shimbun."
+  jp: "IMPS/DRTによるTiO2光アノード解析に関する論文がJACSに掲載され、JAIST、東京科学大学、東京都立大学、日刊工業新聞で紹介されました。"
+  doi: "10.1021/jacs.4c17345"

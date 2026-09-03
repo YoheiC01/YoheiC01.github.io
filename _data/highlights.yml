@@ -1,0 +1,66 @@
+# Visual highlights — cover art, TOC/graphical abstracts, press graphics tied to
+# a publication. Rendered in the Highlights gallery.
+#
+# Fields:
+#   image:   filename under assets/img/highlights/
+#   kind:    string label shown as a small tag, e.g. "Front Cover", "Graphical Abstract", "TOC Graphic", "Explainer Graphic"
+#   journal: string
+#   year:    int
+#   title:   the paper's title (should match an entry in publications.yml)
+#   doi:     string, just the suffix, used to link back to the paper
+
+- image: "front-cover-acsenvironau-2026.jpg"
+  kind: "Front Cover"
+  journal: "ACS Environmental Au"
+  year: 2026
+  title: "A Simple Microplate Assay for Accelerated Photocatalytic Activity Evaluation"
+  doi: "10.1021/acsenvironau.5c00200"
+
+- image: "press-jmca-2026.jpg"
+  kind: "Explainer Graphic"
+  journal: "Journal of Materials Chemistry A"
+  year: 2026
+  title: "Element-Dependent Charge-Supply and Charge-Transfer Balance in Oxide Photocatalysts Identified by High-Throughput Kinetic Screening"
+  doi: "10.1039/D6TA04494H"
+
+- image: "photo-jmca-2026.jpg"
+  kind: "Lab Photo"
+  journal: "Journal of Materials Chemistry A"
+  year: 2026
+  title: "Element-Dependent Charge-Supply and Charge-Transfer Balance in Oxide Photocatalysts Identified by High-Throughput Kinetic Screening"
+  doi: "10.1039/D6TA04494H"
+
+- image: "diagram-jmca-2025.jpg"
+  kind: "Graphical Abstract"
+  journal: "Journal of Materials Chemistry A"
+  year: 2025
+  title: "Identifying Rate-Limiting Steps in Photocatalysis: A Temperature- and Light Intensity-Dependent Diagnostic of Charge Supply vs. Charge Transfer"
+  doi: "10.1039/D5TA00415B"
+
+- image: "toc-jacs-2025.jpg"
+  kind: "TOC Graphic"
+  journal: "Journal of the American Chemical Society"
+  year: 2025
+  title: "Analysis of the TiO2 Photoanode Process Using Intensity Modulated Photocurrent Spectroscopy and Distribution of Relaxation Times"
+  doi: "10.1021/jacs.4c17345"
+
+- image: "ga-catalysts-2021.jpg"
+  kind: "Review Graphic"
+  journal: "Catalysts"
+  year: 2021
+  title: "Photocatalytic methane reforming: recent advances"
+  doi: "10.3390/catal11010018"
+
+- image: "toc-acscatal-2024.jpg"
+  kind: "TOC Graphic"
+  journal: "ACS Catalysis"
+  year: 2024
+  title: "Analyzing the Temperature Dependence of Titania Photocatalysis: Kinetic Competition between Water Oxidation Catalysis and Back Electron–Hole Recombination"
+  doi: "10.1021/acscatal.4c03685"
+
+- image: "ga-applcatala-2022.jpg"
+  kind: "Graphical Abstract"
+  journal: "Applied Catalysis A: General"
+  year: 2022
+  title: "Photocatalysis under thermally shifted bandgap"
+  doi: "10.1016/j.apcata.2022.118772"

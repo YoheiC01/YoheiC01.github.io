@@ -6,3 +6,7 @@ vendor/
 .bundle/
 Gemfile.lock
 .DS_Store
+
+# Raw source material for Highlights images (pptx/pdf/original photos) — not
+# used by the site itself, only kept locally to re-derive processed images.
+assets/img/highlights/_source/

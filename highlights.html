@@ -1,0 +1,40 @@
+---
+layout: default
+title: Highlights
+---
+
+<div class="container" style="padding-top: 56px;">
+
+    <section class="fade-in" style="border-top: none; padding-top: 0;">
+        <h2>Highlights</h2>
+        <p class="page-intro">Cover art, graphical abstracts, and explainer graphics from recent papers.</p>
+
+        <div class="gallery-grid">
+            {%- for item in site.data.highlights -%}
+            {%- assign img_url = '/assets/img/highlights/' | append: item.image | relative_url -%}
+            <div class="gallery-card">
+                <button type="button" class="gallery-frame" data-img="{{ img_url }}" data-alt="{{ item.kind }}: {{ item.title }}">
+                    <img src="{{ img_url }}" alt="{{ item.kind }}: {{ item.title }}" loading="lazy">
+                </button>
+                <div class="gallery-meta">
+                    <span class="gallery-kind">{{ item.kind }}</span>
+                    <span class="gallery-journal">{{ item.journal }} · {{ item.year }}</span>
+                </div>
+                <div class="gallery-title">
+                    {%- if item.doi -%}
+                    <a href="https://doi.org/{{ item.doi }}" target="_blank" rel="noopener">{{ item.title }}</a>
+                    {%- else -%}
+                    {{ item.title }}
+                    {%- endif -%}
+                </div>
+            </div>
+            {%- endfor -%}
+        </div>
+    </section>
+
+</div>
+
+<div class="lightbox" id="lightbox">
+    <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+</div>

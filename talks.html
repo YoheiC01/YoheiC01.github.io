@@ -1,0 +1,28 @@
+---
+layout: default
+title: Talks & Awards
+---
+
+{%- assign months = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," -%}
+
+<div class="container" style="padding-top: 56px;">
+
+    <section class="fade-in" style="border-top: none; padding-top: 0;">
+        <h2>Invited Talks</h2>
+        <ul class="entry-list">
+            {% for item in site.data.talks %}
+            <li><span class="year">{% if item.year_end %}{{ item.year }} – {{ item.year_end }}{% elsif item.month %}{{ months[item.month | minus: 1] }} {{ item.year }}{% else %}{{ item.year }}{% endif %}</span><div class="entry-body">{{ item.en }}{% if item.jp %}<span class="jp" lang="ja">{{ item.jp }}</span>{% endif %}</div></li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="fade-in">
+        <h2>Awards</h2>
+        <ul class="entry-list">
+            {% for item in site.data.awards %}
+            <li><span class="year">{% if item.year_end %}{{ item.year }} – {{ item.year_end }}{% elsif item.month %}{{ months[item.month | minus: 1] }} {{ item.year }}{% else %}{{ item.year }}{% endif %}</span><div class="entry-body">{{ item.en }}{% if item.jp %}<span class="jp" lang="ja">{{ item.jp }}</span>{% endif %}</div></li>
+            {% endfor %}
+        </ul>
+    </section>
+
+</div>

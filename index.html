@@ -3,78 +3,36 @@ layout: default
 title: Yohei Cho
 ---
 
-{%- assign months = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec" | split: "," -%}
+<div class="hero">
+    <img src="{{ '/assets/img/hero.jpg' | relative_url }}" alt="" role="presentation">
+    <div class="hero-inner">
+        <div class="hero-eyebrow">Institute of Science Tokyo</div>
+        <h1>Yohei Cho, Ph.D.</h1>
+        <div class="name-jp" lang="ja">張葉平　博士（学術）</div>
+        <p class="hero-title">Photocatalysis, Photoelectrochemistry, Solar Energy Conversion, High-throughput Exploration</p>
+    </div>
+</div>
 
 <div class="container">
 
-    <header class="header">
-        <img src="{{ '/profile-pic.jpg' | relative_url }}" alt="Portrait of Yohei Cho" class="profile-pic">
-        <div class="header-text">
-            <h1>Yohei Cho, Ph.D.</h1>
-            <div class="name-jp" lang="ja">張葉平　博士（学術）</div>
-            <div class="title">Assistant Professor, Institute of Science Tokyo</div>
-        </div>
-    </header>
-
-    <section id="background" class="fade-in">
-        <h2>Background</h2>
-        {% for entry in site.data.cv %}
-        <div class="cv-entry">
-            <span class="cv-date">{{ entry.date }}</span>
-            <div class="cv-desc">{{ entry.en }}{% if entry.jp %}<span class="jp" lang="ja">{{ entry.jp }}</span>{% endif %}</div>
-        </div>
-        {% endfor %}
-    </section>
-
-    <section id="research" class="fade-in">
-        <h2>Research Areas</h2>
-        <p class="research-text">Photocatalysis, Photoelectrochemistry, Solar Energy Conversion, High-throughput Exploration<span class="jp" lang="ja">光触媒、光電気化学、太陽エネルギー変換、ハイスループット探索</span></p>
-    </section>
-
-    <section id="publications" class="fade-in">
-        <h2>Publications</h2>
-        <ol class="pub-list" style="counter-reset: pub-counter {{ site.data.publications | size | plus: 1 }}">
-            {%- for pub in site.data.publications -%}
-            {%- assign authors = pub.authors | replace: "[[", '<span class="author-highlight">' | replace: "]]", "</span>" -%}
-            <li class="pub-item">{{ authors }}, <span class="pub-title">"{{ pub.title }},"</span> <em>{{ pub.journal }}</em>
-            {%- if pub.status -%}
-                , {{ pub.status }} ({{ pub.year }})
-            {%- elsif pub.volume -%}
-                , <strong>{{ pub.volume }}</strong>{% if pub.issue %} ({{ pub.issue }}){% endif %}{% if pub.pages %}, {{ pub.pages }}{% endif %} ({{ pub.year }})
-            {%- else -%}
-                {{ " " }}({{ pub.year }})
-            {%- endif -%}
-            .{% if pub.doi %} <a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener">doi:{{ pub.doi }}</a>{% endif %}{% if pub.note %} <span class="pub-note">({{ pub.note }})</span>{% endif %}
-            {%- if pub.press %}<span class="pub-press"><span class="pub-press-label">Press</span><span class="pub-press-items">{% for item in pub.press %}{% unless forloop.first %} <span class="pub-press-sep">·</span> {% endunless %}<a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.outlet }}</a>{% endfor %}</span></span>{% endif -%}
+    <section id="news" class="fade-in" style="border-top: none;">
+        <h2>News</h2>
+        <ul class="entry-list news-list">
+            {%- for item in site.data.news -%}
+            <li>
+                <span class="year">{{ item.date | date: "%b %-d, %Y" }}</span>
+                <div class="entry-body">
+                    {%- if item.doi -%}
+                    <a href="https://doi.org/{{ item.doi }}" target="_blank" rel="noopener">{{ item.en }}</a>
+                    {%- elsif item.url -%}
+                    <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.en }}</a>
+                    {%- else -%}
+                    {{ item.en }}
+                    {%- endif -%}
+                    {% if item.jp %}<span class="jp" lang="ja">{{ item.jp }}</span>{% endif %}
+                </div>
             </li>
-            {%- endfor %}
-        </ol>
-    </section>
-
-    <section id="awards" class="fade-in">
-        <h2>Awards</h2>
-        <ul class="entry-list">
-            {% for item in site.data.awards %}
-            <li><span class="year">{% if item.year_end %}{{ item.year }} – {{ item.year_end }}{% elsif item.month %}{{ months[item.month | minus: 1] }} {{ item.year }}{% else %}{{ item.year }}{% endif %}</span><div class="entry-body">{{ item.en }}{% if item.jp %}<span class="jp" lang="ja">{{ item.jp }}</span>{% endif %}</div></li>
-            {% endfor %}
-        </ul>
-    </section>
-
-    <section id="fellowships" class="fade-in">
-        <h2>Fellowships</h2>
-        <ul class="entry-list">
-            {% for item in site.data.fellowships %}
-            <li><span class="year">{% if item.year_end %}{{ item.year }} – {{ item.year_end }}{% elsif item.month %}{{ months[item.month | minus: 1] }} {{ item.year }}{% else %}{{ item.year }}{% endif %}</span><div class="entry-body">{{ item.en }}{% if item.jp %}<span class="jp" lang="ja">{{ item.jp }}</span>{% endif %}</div></li>
-            {% endfor %}
-        </ul>
-    </section>
-
-    <section id="talks" class="fade-in">
-        <h2>Invited Talks</h2>
-        <ul class="entry-list">
-            {% for item in site.data.talks %}
-            <li><span class="year">{% if item.year_end %}{{ item.year }} – {{ item.year_end }}{% elsif item.month %}{{ months[item.month | minus: 1] }} {{ item.year }}{% else %}{{ item.year }}{% endif %}</span><div class="entry-body">{{ item.en }}{% if item.jp %}<span class="jp" lang="ja">{{ item.jp }}</span>{% endif %}</div></li>
-            {% endfor %}
+            {%- endfor -%}
         </ul>
     </section>
 
