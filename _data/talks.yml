@@ -9,6 +9,9 @@
 #             domestic Japanese-language talks put the 「日本語タイトル」+ 会議名 here
 #   jp:       secondary line, rendered small and muted below (optional)
 
+- year: 2026
+  en: '"Exploration in photocatalyst and photocatalysis," LAMP, Beijing, China'
+
 - year: 2025
   en: '"High-throughput exploration of photocatalysts," Pacifichem 2025, Honolulu, Hawaii, USA'
 
