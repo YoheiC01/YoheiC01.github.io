@@ -9,9 +9,8 @@
 #   pdf:  filename under assets/files/ (optional) — links the item to a PDF (e.g. an event flyer); ignored if doi or url is set
 
 - date: "2026-10-08"
-  en: "Organizing the International Mini-Symposium \"Emerging Approaches to Solar Energy Conversion, Catalysis, and Materials Discovery\" on Tuesday, 13 October 2026, 13:30–17:00 at Room S7-201, Ookayama Campus, Institute of Science Tokyo, with speakers from National Chung Hsing University (Taiwan), Institute of Science Tokyo, and Tokyo University of Science. Free admission, all are welcome."
-  jp: "国際ミニシンポジウム「Emerging Approaches to Solar Energy Conversion, Catalysis, and Materials Discovery」を2026年10月13日（火）13:30–17:00に東京科学大学大岡山キャンパスS7-201にて開催します。国立中興大学（台湾）、東京科学大学、東京理科大学から講演者をお迎えします。参加無料、どなたでもご参加いただけます。"
-  pdf: "flyer-minisymposium-2026-10-13.pdf"
+  en: "We will hold the International Mini-Symposium \"Emerging Approaches to Solar Energy Conversion, Catalysis, and Materials Discovery\" on 13 October 2026. If you are interested, please contact cho@mct.isct.ac.jp."
+  jp: "2026年10月13日に国際ミニシンポジウム「Emerging Approaches to Solar Energy Conversion, Catalysis, and Materials Discovery」を開催します。ご興味のある方は cho@mct.isct.ac.jp までご連絡ください。"
 
 - date: "2026-08-31"
   en: "New paper on element-dependent charge-supply/charge-transfer balance in oxide photocatalysts published in Journal of Materials Chemistry A, with press releases from JAIST, Tokyo University of Science, and Science Tokyo."

@@ -11,13 +11,6 @@
 #   pdf:     filename under assets/files/ (optional) — links the title to a PDF
 #            (e.g. an event flyer) instead of a paper; ignored if doi is set
 
-- image: "flyer-minisymposium-2026.jpg"
-  kind: "Event Flyer"
-  journal: "International Mini-Symposium, Science Tokyo"
-  year: 2026
-  title: "Emerging Approaches to Solar Energy Conversion, Catalysis, and Materials Discovery"
-  pdf: "flyer-minisymposium-2026-10-13.pdf"
-
 - image: "front-cover-acsenvironau-2026.jpg"
   kind: "Front Cover"
   journal: "ACS Environmental Au"
