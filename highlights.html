@@ -7,14 +7,14 @@ title: Highlights
 
     <section class="fade-in" style="border-top: none; padding-top: 0;">
         <h2>Highlights</h2>
-        <p class="page-intro">Cover art, graphical abstracts, and explainer graphics from recent papers.</p>
+        <p class="page-intro">Cover art, graphical abstracts, and explainer graphics from recent papers, plus event flyers.</p>
 
         <div class="gallery-grid">
             {%- for item in site.data.highlights -%}
             {%- assign img_url = '/assets/img/highlights/' | append: item.image | relative_url -%}
             <div class="gallery-card">
                 <button type="button" class="gallery-frame" data-img="{{ img_url }}" data-alt="{{ item.kind }}: {{ item.title }}">
-                    <img src="{{ img_url }}" alt="{{ item.kind }}: {{ item.title }}" loading="lazy">
+                    <img src="{{ img_url }}"{% if item.pdf %} class="crop-top"{% endif %} alt="{{ item.kind }}: {{ item.title }}" loading="lazy">
                 </button>
                 <div class="gallery-meta">
                     <span class="gallery-kind">{{ item.kind }}</span>
@@ -23,6 +23,8 @@ title: Highlights
                 <div class="gallery-title">
                     {%- if item.doi -%}
                     <a href="https://doi.org/{{ item.doi }}" target="_blank" rel="noopener">{{ item.title }}</a>
+                    {%- elsif item.pdf -%}
+                    <a href="{{ '/assets/files/' | append: item.pdf | relative_url }}" target="_blank" rel="noopener">{{ item.title }}</a> <a class="gallery-pdf" href="{{ '/assets/files/' | append: item.pdf | relative_url }}" target="_blank" rel="noopener">[PDF]</a>
                     {%- else -%}
                     {{ item.title }}
                     {%- endif -%}

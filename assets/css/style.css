@@ -327,6 +327,9 @@ h2 {
 }
 .gallery-frame:hover, .gallery-frame:focus-visible { border-color: var(--accent-mid); }
 .gallery-frame img { width: 100%; height: 100%; object-fit: cover; }
+/* Portrait flyers: keep the title band visible instead of the centre crop. */
+.gallery-frame img.crop-top { object-position: top; }
+.gallery-pdf, .news-pdf { white-space: nowrap; font-size: 0.85em; }
 
 /* Lightbox — the page behind stays exactly as-is (no dimming); only the
    enlarged image appears, so a shadow does the work of separating it.

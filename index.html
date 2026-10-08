@@ -26,6 +26,8 @@ title: Yohei Cho
                     <a href="https://doi.org/{{ item.doi }}" target="_blank" rel="noopener">{{ item.en }}</a>
                     {%- elsif item.url -%}
                     <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.en }}</a>
+                    {%- elsif item.pdf -%}
+                    <a href="{{ '/assets/files/' | append: item.pdf | relative_url }}" target="_blank" rel="noopener">{{ item.en }}</a> <a class="news-pdf" href="{{ '/assets/files/' | append: item.pdf | relative_url }}" target="_blank" rel="noopener">[Flyer PDF]</a>
                     {%- else -%}
                     {{ item.en }}
                     {%- endif -%}
